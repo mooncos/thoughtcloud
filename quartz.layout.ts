@@ -29,13 +29,18 @@ export const defaultContentPageLayout: PageLayout = {
     Component.Darkmode(),
     Component.DesktopOnly(Component.Explorer({
       sortFn: (a, b) => {
+        const emojis = /([\u2700-\u27BF]|[\uE000-\uF8FF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|[\u2011-\u26FF]|\uD83E[\uDD10-\uDDFF])/g
+        const a_name = a.name.replace(emojis, '').trim()
+        const a_dname = a.displayName.replace(emojis, '').trim()
+        const b_name = b.name.replace(emojis, '').trim()
+        const b_dname = b.displayName.replace(emojis, '').trim()
         // Sort order: folders first, then files. Sort folders and files alphabetically
-        if (a.name.match(/Home$/)) { return -1 }
-        if (b.name.match(/Home$/)) { return 1 }
+        if (/^.*Home$/.test(a_dname)) { return -1 }
+        if (/^.*Home$/.test(b_dname)) { return 1 }
         if ((!a.file && !b.file) || (a.file && b.file)) {
           // numeric: true: Whether numeric collation should be used, such that "1" < "2" < "10"
           // sensitivity: "base": Only strings that differ in base letters compare as unequal. Examples: a ≠ b, a = á, a = A
-          return a.displayName.localeCompare(b.displayName, undefined, {
+          return a_dname.localeCompare(b_dname, undefined, {
             numeric: true,
             sensitivity: "base",
           })

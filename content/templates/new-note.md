@@ -1,5 +1,6 @@
 ---
 title: New Note
-tags: []
+tags: 
 date: <% tp.date.now("yyyy-MM-DD") %>
+lastmod: <% tp.date.now("yyyy-MM-DD") %>
 ---

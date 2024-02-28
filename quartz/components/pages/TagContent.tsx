@@ -90,7 +90,13 @@ function TagContent(props: QuartzComponentProps) {
       <div class={classes}>
         <article>{content}</article>
         <div class="page-listing">
-          <p>{i18n(cfg.locale).pages.tagContent.itemsUnderTag({ count: pages.length })}</p>
+          {pages.length != 0 && (
+            <p>
+              {i18n(cfg.locale).pages.tagContent.itemsUnderTag({
+                count: pages.length
+              })}
+            </p>
+          )}
           <div>
             <PageList {...listProps} />
           </div>
