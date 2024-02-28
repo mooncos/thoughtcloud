@@ -1,5 +1,5 @@
 ---
-title: Projects - Home
+title: 🏠 Projects - Home
 tags:
   - toc
   - project
