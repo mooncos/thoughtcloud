@@ -37,7 +37,7 @@ quote!{
 
 Here, everything inside the `#()`  parenthetical will be repeatedly generated for each element of `some_vec`, with `#some_vec` expanding to the element at the current index. Presumably it contains the `Ident` s of some variable names of type `i32` that we want to declare and assign 5 to all of them in our macro. An expansion might look like:
 ```rust
-let x = 5;let y = 5; let z = 5;
+let x = 5;let y = 5;let z = 5;
 ```
 
 It's okay that it's not pretty because the compiler will see it as valid anyway.
