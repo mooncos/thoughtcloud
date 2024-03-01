@@ -14,7 +14,7 @@ In case you missed it, Trump's cases made their first oral argument appearance a
 - New RSS feed at [Updates.xml](/Updates.xml) that only changes once a month when I push updates like this one.
 - Seedling: [[Projects/rss-foss|The Future of RSS]]
 - Seedling: [[Programs I Like/rust-macros|Rust Macros: Enough to be Dangerous]]
-- New project: [[Projects/rsgistry|r/\[es\]/gistry]]
+- New project: [[Projects/rsgistry|rsgistry]]
 ## Status Updates
 - Updated the engine, which was terrifying given how many custom tweaks I have to it.
 - Tweaked the sort function
