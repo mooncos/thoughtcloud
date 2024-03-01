@@ -1,9 +1,9 @@
 ---
 title: 02/24 - Summary of Changes
-draft: true
+draft: false
 tags:
   - "#update"
-date: 2024-02-02
+date: 2024-02-01
 lastmod: 2024-02-29
 ---
 ## Housekeeping
