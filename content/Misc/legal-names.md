@@ -1,6 +1,8 @@
 ---
 title: Silly Legal Name Jokes
-tags: 
+tags:
+  - misc
+  - seedling
 date: 2024-02-28
 lastmod: 2024-02-28
 ---
