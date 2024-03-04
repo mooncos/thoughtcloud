@@ -64,17 +64,17 @@ But then a company actually has to train an AI on that data. What copyright issu
 Searle's exercise was at the time an extension of the Turing test designed to refute the theory of "Strong AI." At the time that theory was well-named, but today the AI it was talking about is not even considered AI by most. The hypothetical Strong AI was a computer program capable of understanding its inputs and outputs, and importantly *why* it took each action to solve a problem, with the ability to apply that understanding to new problems (much like our modern conception of Artificial General Intelligence). A Weak AI, on the other hand, was just the Chinese Room: taking inputs and producing outputs among defined rules. Searle reasoned that the "understanding" of a Strong AI was inherently biological, thus one could not presently exist.
 - Note that some computer science sources like [IBM](https://www.ibm.com/topics/strong-ai) have taken to using Strong AI to denote only AGI, which was a sufficient, not necessary quality of a philosophical "intelligent" intelligence.
 
-Generative AI models from different sources are architected in a variety of different ways, but they all boil down to one abstract process, where an absurdly massive number of parameters are tuned to the exact values that produce the most desirable output. (note: [CGP Grey's video on AI](https://www.youtube.com/watch?v=R9OHn5ZF4Uo) and its follow-up are mainly directed towards neural networks, but do apply to LLMs, and do a great job illustrating this). ==more==
+Generative AI models from different sources are architected in a variety of different ways, but they all boil down to one abstract process: tuning an absurdly massive number of parameters to the exact values that produce the most desirable output. (note: [CGP Grey's video on AI](https://www.youtube.com/watch?v=R9OHn5ZF4Uo) and its follow-up are mainly directed towards neural networks, but do apply to LLMs, and do a great job illustrating this). This process requires a gargantuan stream of data to use to calibrate those parameters and then as both input and target output to test the model. 
 
 Modern generative AI, like the statistical data models and machine learners before it, is a Weak AI. And weak AIs use weak AI data.
 - Sidebar: this point doesn't consider an AI's ability to summarize a work since the section focuses on how the *training* inputs are used rather than how the output is generated from real input. It's confusing, but these are two linked concepts when talking about machine learning rather than direct results of each other. Especially when you introduce concepts like "temperature", which is a degree of randomness added to a model's (already variant) choices in response to an input to simulate creativity.
 - ...I'll talk about that in the next section.
-
 #### Detour: point for the observant
-The idea and expression being indistinguishable by AI may make one immediately think to merger doctrine; that is, the idea inherent in the work trained on merges with its expression, so it is not copyrightable. That would not be a correct reading of merger doctrine. [*Ets-Hokin v. Skyy Spirits, Inc.*](https://casetext.com/case/ets-hokin-v-skyy-spirits-inc) makes it clear that the doctrine is more about disregarding the types of works that are low-expressivity by default, and that this "merge" is just a nice name to remember the actual test by. Confusing name, easy doctrine.
+The idea and expression being indistinguishable by AI may make one immediately think of merger doctrine. That argument looks like: the idea inherent in the work trained on merges with its expression, so it is not copyrightable. That would not be a correct reading of the doctrine. [*Ets-Hokin v. Skyy Spirits, Inc.*](https://casetext.com/case/ets-hokin-v-skyy-spirits-inc) makes it clear that the doctrine is more about disregarding the types of works that are low-expressivity by default, and that this "merge" is just a nice name to remember the actual test by. Confusing name, easy doctrine.
 ### Generation
 
 ### Fair Use
+
 #### Detour: actual harm caused by specific uses of AI models
 My bet for a strong factor when courts start applying fair use tests to AI output is that the use in the instant case causes or does not cause harm. Here's a quick list of uses that probably do cause harm.
 - Election fraud, including even **more** corporate influence on US elections ([not hypothetical](https://www.washingtonpost.com/elections/2024/01/18/ai-tech-biden/) [in the slightest](https://openai.com/careers/elections-program-manager), [and knowingly unethical](https://www.npr.org/2024/01/19/1225573883/politicians-lobbyists-are-banned-from-using-chatgpt-for-official-campaign-busine))
@@ -95,6 +95,8 @@ There's also the problem of correctly sourcing information used in forming an op
 One proposed "solution" to AI use of copyrighted works is interestingly to attribute that those works were used in the first place.
 ## The enforcement problem
 WIP
+## Building universal truth
+
 ## Why is piracy ethical, but not AI training?
 
 ## Mini-arguments
@@ -102,5 +104,7 @@ A list of little statements that would cast doubt on the general legitimacy of t
 
 - [Cartoonist Dorothy’s emotional story re: midjourney and exploitation against author intent](https://socel.net/@catandgirl/111766715711043428)
 - [Misinformation worries](https://mas.to/@gminks/111768883732550499)
+- Inevitable harm
+	- Temperature and the very fact that word generation is used mean that there's no way to completely eliminate hallucination, so truth in AI is unobtainable. [Xu, et al.](https://arxiv.org/abs/2401.11817)
 
 ==TODO analyze and applaud https://www.techdirt.com/2023/11/29/lets-not-flip-sides-on-ip-maximalism-because-of-ai/ ==
