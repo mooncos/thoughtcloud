@@ -14,7 +14,7 @@ Here are some of the more interesting/mature works on my site organized by topic
 - [[Essays/law-school|Law School is Broken]]
 ## Open Source
 - [[Projects/zotero-lexis-plus|Zotero now usable by the legal profession]]
-- [[Projects/rsgistry|r/[es]/gistry]]
+- [[Projects/rsgistry|rsgistry]]
 ## Tech
 - [[Projects/my-computer|My Computer]]
 - [[Essays/on-linux|The Linux Experience]]

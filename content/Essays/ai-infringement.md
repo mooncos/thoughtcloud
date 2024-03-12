@@ -6,7 +6,7 @@ tags:
   - legal
   - copyright
 date: 2023-11-04
-draft: true
+draft: false
 lastmod: 2024-01-28
 ---
 One ticket to the original, authorized, or in the alternative, properly licensed audiovisual work, please!
@@ -39,9 +39,9 @@ However, this argument forgets that intangible rights are not *yet* so centraliz
 
 Reconciling the two views, I'm sympathetic to arguments against specific parts of the US's copyright regime as enforced by the courts, such as the way fair use is statutorily worded. We as a voting population have the power to compel our representatives to enact reforms that take the threat of ultimate centralization into account, and can even work to break down what's already here. But I don't think that AI should be the impetus for arguments against the system as a whole.
 ## The Legal Argument
-Fair warning, this section is going to be the most law-heavy, and probably pretty tech-heavy too. Feel free to skip [[#The First Amendment and the "Right to Read"|-> straight to the policy debates.]] The field is notoriously paywalled, but I'll try to link to publicly available versions of my sources whenever possible.
+Fair warning, this section is going to be the most law-heavy, and probably pretty tech-heavy too. Feel free to skip [[#The First Amendment and the "Right to Read"|-> straight to the policy debates.]] 
 
-Please don't criticize my sources in this section unless a case has been overruled or a statute has been repealed/amended (*i.e.*, I **can't** rely on it). This is my interpretation of what's here (again, not legal advice or a professional opinion. Seek legal counsel before acting/refraining from action re: AI). Whether a case is binding on you personally doesn't weigh in on whether its holding is the nationally accepted view.
+The field is notoriously paywalled, but I'll try to link to publicly available versions of my sources whenever possible. Please don't criticize my sources in this section unless a case has been overruled or a statute has been repealed/amended (*i.e.*, I **can't** rely on it). This is my interpretation of what's here (again, not legal advice or a professional opinion. Seek legal counsel before acting/refraining from action re: AI). Whether a case is binding on you personally doesn't weigh in on whether its holding is the nationally accepted view.
 
 For all of the below analysis, assume that the hypothetical model in question has been trained on some work which has a US copyright registered with the original author.
 
