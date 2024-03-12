@@ -1,3 +1,15 @@
+** CONTENT **
+
+Copyright (c) 2024 bfahrenfort.
+
+Written content (under the content/ folder) is my sole intellectual property and unauthorized reproduction/use is prohibited. I specifically authorize citing my work in your own with a deep link to the page, and the limited reproduction necessary to effectuate the non-reproduction/primary purpose of your work.
+
+** CODE **
+
+The generator and all code and configuration is MIT licensed. Copyright notice for the parts that I created and the contributions of others is reproduced below.
+
+** CODE **
+
 MIT License
 
 Copyright (c) 2021 jackyzha0
