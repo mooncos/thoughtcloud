@@ -6,7 +6,7 @@ tags:
   - legal
   - copyright
 date: 2023-11-04
-draft: false
+draft: true
 lastmod: 2024-01-28
 ---
 One ticket to the original, authorized, or in the alternative, properly licensed audiovisual work, please!
