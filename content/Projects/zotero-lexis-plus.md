@@ -29,7 +29,7 @@ It's worth noting that all of these steps would be performed in separate locatio
 
 ---
 ## There's got to be an easier way.
-I'm familiar with [Zotero](https://www.zotero.org/) from my computer science days for researching IEEE papers sources. It's compatible with the largest academic article and book databases, and supports attachments. 
+I'm familiar with [Zotero](https://www.zotero.org/) from my computer science days for researching IEEE paper sources. It's compatible with the largest academic article and book databases, and supports attachments. 
 
 Alas! I can't use it to save cases. All resources on the internet tell me that Zotero is a great resource for legal research, with the caveat that it's incompatible with the biggest legal research databases, [WestLaw](https://legal.thomsonreuters.com/en/westlaw) and [LexisNexis](https://www.lexisnexis.com/en-us/products/lexis-plus.page). 
 ## Turns out Zotero's compatibility is an open source project with inbuilt development tools.

@@ -5,7 +5,7 @@ tags:
   - misc
   - seedling
 date: 2024-01-13
-lastmod: 2024-01-14
+lastmod: 2024-01-143-07
 ---
 One of the core philosophies of digital gardening is that one should document their learning process when trying new things. As such, here's my very disorganized to-dos and to-reads in the form of a public bookmark list. This page will change very often.
 
