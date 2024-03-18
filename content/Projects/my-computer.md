@@ -43,7 +43,7 @@ I use a [bare git repository](https://www.atlassian.com/git/tutorials/dotfiles) 
 #### Config Hell
 - There are a lot of little tweaks I do to software to make it fully useful to me, which is the one argument I’ve ever raised *against* compartmentalizing through Flatpak, Snap, etc. 
     - I have a bunch of Flatpak programs with absolutely no settings sync or remotely near the capability to sync, so what do I do when I want to migrate?
-- Hey kids wanna see a dead husk of a man? Come find me three hours after I update my Neovim install. Dear lord, that thing breaks OFTEN. 
+- Hey kids wanna see a dead husk of a man? Come find me three hours after I update my [[code-editors#Neovim|Neovim]] install. Dear lord, that thing breaks OFTEN. 
 ### Future?
 Upgrades are inevitable with any piece of hardware. Now that my GPU is up to a 3060ti from a 1650s, I'm looking to upgrade my cpu. I'll follow through on that when linux figures out thread scheduling on newer cpu die layouts (p-core e-core is still rough at the moment).
 ## Software

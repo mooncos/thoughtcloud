@@ -10,12 +10,16 @@ Artist's will, don't exploit
 ### Detour: plagiarism
 There's also the problem of correctly sourcing information used in forming an opinion.
 
-One proposed "solution" to AI use of copyrighted works is interestingly to attribute that those works were used in the first place.
+One proposed "solution" to AI use of copyrighted works is interestingly to cite those works used in generating an answer. But I actually think an anti-plagiarism argument that I disagree with regarding human work finds footing here. I talked about the *reductio ad absurdum* point in [[Essays/plagiarism#Response to Frye|🅿️ my response to Frye on plagiarism]]...
 ## Economics
 WIP
+
+### What these incentives teach us
+At the end of the day, these policy arguments are here to suggest what direction the law should move in. To solve the economic "half" of the AI problem, what about a different kind of commercial right? Something more trademark than copyright. ==use of expression; remedies too==
 ## The enforcement problem
 WIP
 ## Building universal truth
 WIP
-## Why is piracy ethical, but not AI training?
+## Ethics
+Why is piracy ethical, but not AI training?
 WIP

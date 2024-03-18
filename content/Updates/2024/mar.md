@@ -6,13 +6,17 @@ tags:
 date: 2024-03-01
 ---
 ## Housekeeping
-Howdy, y'all. *Trump v. Anderson* got a decision, and it's about what I expected. I'm not a Supreme Court scholar (I just moonlight as a reactionary haha), so here's someone who **is** to explain the effects. Unfortunately on Substack, [Steve Vladeck's One First: The Shoddy Politics of Trump v. Anderson](https://stevevladeck.substack.com/p/70-the-three-biggest-problems-with)
+Howdy, y'all. I've now been maintaining this garden for about 6 months, and I've definitely found a rhythm!
 
-I'm also trying to improve my writing style, because I struggle with conveying high-tech, informed entertainment for all audiences. Suggestions appreciated, so please consider my more verbose opinions on tech in this garden a continuing work-in-progress until I find a voice I'm happy with.
+*Trump v. Anderson* got a decision, and it's about what I expected. I'm not a Supreme Court scholar (I just moonlight as a reactionary haha), so here's someone who **is** to explain the catastropic effects. Unfortunately on Substack, [Steve Vladeck's One First: The Shoddy Politics of Trump v. Anderson](https://stevevladeck.substack.com/p/70-the-three-biggest-problems-with)
+
+I'm also trying to improve my writing style, because I struggle with conveying high-tech, informed entertainment for all audiences. **Suggestions appreciated**, so please consider my more verbose opinions on tech in this garden a continuing work-in-progress until I find a voice I'm happy with.
 ## Pages
 - Making significant headway on the AI infringement essay. **Status 80%**, I might just publish soon after some heavy edits to curb verbosity.
 - Seedling: [[Resources/law-students|Resources for Law Students]] (extracted from [[Essays/law-school|Law School is Broken]], new section added)
+- Seedling: [[Projects/vfio-pci|eGPU Passthrough]]
 - Content update: [[Projects/rss-foss|Toward RSS]]
+- Content update: [[Essays/on-linux|The Linux Experience]]
 ## Status Updates
 - Fixed the license on the repo, it mistakenly identified my written content as MIT-licensed.
 - Added RSS feeds to the homepage's metadata, which should allow better integration with auto-discovery tools such as [RSS Is Dead](https://rss-is-dead.lol).

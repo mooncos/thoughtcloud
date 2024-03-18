@@ -7,6 +7,7 @@ tags:
   - seedling
   - essay
 date: 2023-08-23
+lastmod: 2024-03-17
 ---
 > [!hint]  This page documents my many adventures with Linux and why I enjoy it.
 > If you're looking to get involved with Linux, feel free to browse the [[Resources/learning-linux|resources for that purpose]] that I've compiled.
@@ -26,7 +27,7 @@ It did need some special setup to run RetroArch, so I created a script and left 
 
 The response I got was amazing! Everyone in the organization was extremely grateful, and I'm so happy I undertook that project.
 
-Unfortunately, the cabinet was scrapped earlier this year due to space requirements and a shifting purpose for the room, but it did end up being used actively for a few years, so I don't regret the project at all.
+Unfortunately, the cabinet was scrapped in mid-2023 due to space requirements and a shifting purpose for the room, but it did end up being used actively for a few years, so I don't regret the project at all.
 ## Bare Metal
 This has been my favorite part of my journey. Unrestrained, Linux is...surprisingly good, actually. 
 
@@ -47,3 +48,28 @@ $\downarrow$ **Here's how that's going**: { WIP }
 ### Kernel
 For the love of god, don't ever use the default kernel when daily driving. A custom kernel will squeeze every ounce of performance out of your hardware the way Windows would. I recommend the [CachyOS Kernel](https://github.com/CachyOS/linux-cachyos).
 - Fedora has a copr, and it's available on basically every Arch distro. Sorry debian/ubuntu users.
+### Animosity towards Windows
+I've had to retain a Windows dual-boot in order to use the exam software required by my law school. I could probably virtualize it since its protections are laughable (it won't boot if you have a second monitor or have a vmware workstation *host* installed, but the fact that Windows is running as a Hyper-V *guest* isn't an issue), but I don't want to risk being falsely flagged as academically dishonest until after my final 3L exams when it literally doesn't matter. Regardless, every time I boot it back up I'm presented with many of the reasons I swapped to Linux in the first place.
+
+First, the startup. Windows has quite a few non-privacy, non-furtive idiosyncrasies, but by far the most infuriating is how the system hitches for 3-4 minutes during and after login from a shutdown or reboot.
+### Jumping Ship to Arch
+I started playing around with Arch on my 1TB expansion card when Fedora announced they were considering dropping X11 a few months ago. Interestingly, I ended up wanting to use Wayland with Arch anyway.
+#### Digital Extremes and Wonky Macros (DEs/WMs)
+I first tried Hyprland with a random sensible config I found on YouTube, and once I stripped out Kitty for Alacritty I quite liked it. The only issue was that toolbars on things like Firefox and Dolphin take up way too much screen real estate.
+
+Then, I added gnome and the gnome apps, was fun to try the newest gnome and see how well integrated with Wayland it was.
+
+And finally, I booted this back up once Plasma 6 dropped. Honestly, it's the first Plasma desktop that's actually looked good to me, so this will probably be what I swap to. Wayland was also great but it was less fault-tolerant than GNOME: I had to **enable kernel mode setting to get Plasma to work with Wayland NVIDIA multi-monitor.** 1.75x scaling on the Framework internal monitor and 1x on the 1080p worked like a charm.
+
+I may also try [Niri](https://github.com/YaLTeR/niri) and [Karousel](https://github.com/peterfajdiga/karousel) soon if I upgrade to an ultrawide monitor.
+#### Other Fun Times
+Having an installed OS that you can throw anything on without regard to breakage has been great for toying with whatever catches my fancy. This is actually where I experimented with (wip) [[Projects/vfio-pci|GPU passthrough to a Windows VM]].
+
+I've also been doing some Rust toolchain witchery on here but I'm not ready to write about it yet.
+#### Progress
+I've figured out what I want for my eventual install, just haven't done anything yet.
+- Desktop: Wayland
+- Greeter: SDDM
+- DE: Plasma 6
+- Theme: Graphite
+- Filesystem: BTRFS
