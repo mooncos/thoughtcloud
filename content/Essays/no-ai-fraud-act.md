@@ -6,7 +6,7 @@ tags:
   - ai
 date: 2024-01-24
 draft: false
-lastmod: 2024-01-30
+lastmod: 2024-03-31
 ---
 Here's an AI skeptic's legal take on the bill.
 
@@ -111,6 +111,7 @@ Most of the arguments against the Act's Section 230 exception assume that the Ac
 	- Content drives user engagement for collection of advertising data.
 	- Content may alienate users from the platform, but an individual video has made money for YouTube if that user has clicked on it.
 - Enforcement against platforms for misleading conduct (which is more likely to be considered harmful under the statute) is beneficial to users of the platform, because they will no longer be targets of that misleading conduct if the platform is forced to disallow it.
+- Sidebar: There's more to AI and Section 230. Namely, platforms could be liable for the effects of their users' use of platform AI under current laws. WSJ piece potentially [here]( https://www.wsj.com/tech/ai/the-ai-industry-is-steaming-toward-a-legal-iceberg-5d9a6ac1?st=5rjze6ic54rocro&reflink=desktopwebshare_permalink ), let me know if the link is paywalled.
 
 And the final nail in the coffin for immunity is precisely that lack of action in the absence of either a partial sword or partial shield. Again looking at YouTube, take a look at their [statement on AI](https://blog.youtube/inside-youtube/our-approach-to-responsible-ai-innovation/) from November. <img src="/Attachments/yt-label.png" alt="Screenshot of a YouTube Short's description with a badge reading: 'Altered or synthetic content.' Credit to YouTube." style="float:left;height: 25em; padding: 0em 2em"> 
 
