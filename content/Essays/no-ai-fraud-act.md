@@ -17,7 +17,7 @@ The [No AI FRAUD Act](https://files.constantcontact.com/1849eea4801/695cfd71-1d2
 ## Summary of the Bill
 Please read the [full text](https://files.constantcontact.com/1849eea4801/695cfd71-1d24-4146-a453-3dab7d49babd.pdf) yourself! This summary restructures the text and omits several legal concepts in favor of simplicity. The most important points are bolded. In effect, the bill:
 - Establishes a transferable federal publicity right in one's voice and likeness that extends beyond death that **steps past a website's Section 230 immunity** from most suits concerning user content
-- Creates a private cause of action against:
+- Creates a private cause of action against:system
 	- Proprietors of "personalized cloning services": software with the primary purpose of producing digital voice replicas/depictions
 	- Anyone who releases an unauthorized digital voice replica/depiction
 	- For both of the above, a disclaimer saying that the person depicted/replicated is not affiliated is not a defense

@@ -3,7 +3,8 @@ title: MM/YY - Summary of Changes
 draft: true
 tags:
   - "#update"
-date: <% tp.date.now("yyyy-MM-DD") %>
+date: 2024-04-01
+lastmod: 2024-04-30
 ---
 ## Housekeeping
 

@@ -11,4 +11,6 @@ A collection of project/article/series names for law-adjacent subjects that I'll
 - Replevin for a Dream
 - Circuit Split (for use in connection with tech law)
 - 5th Circus
-  - shamelessly stolen from Techdirt
+  - Shamelessly stolen from Techdirt
+- A Straightforward Inquiry
+	- (re: *ex parte Young*)
