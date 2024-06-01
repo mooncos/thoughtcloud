@@ -9,6 +9,8 @@ draft: false
 ---
 Here’s what I’m working on right now. Some of it might not make sense, I use this personally to keep track of what I’m writing. 
 
+The date on this page will not be accurate in order to avoid spamming RSS feeds.
+
 - High Priority
     - [ ] ai-infringement
     - [ ] Ranting about ethics and AI research in a misc diatribe 
@@ -19,3 +21,4 @@ Here’s what I’m working on right now. Some of it might not make sense, I use
 - [ ] Add the third party doctrine to my-cloud
 - [ ] FPV
 - [ ] Keyboard writeup
+- [ ] Moving to FIDO2 and password managers
