@@ -15,3 +15,5 @@ Microsoft's Recall feature has released, and it's a security mess. Not fun.
 - New: [[todo-list|Public Todos]]; I moved my todo list out of my personal notes to give an idea of what's next.
 - Content update: [[Resources/learning-linux|Learning Linux]]. Expect this to grow pretty substantially.
 - Content update: [[Essays/on-linux#The Linux Experience]]. I swapped to a new system!
+## Status Updates
+- Changed the header font to Monaspace Neon. I really like the [Monaspace](https://github.com/githubnext/monaspace) family, available in nerd font as [Monaspice](https://www.nerdfonts.com/font-downloads).
