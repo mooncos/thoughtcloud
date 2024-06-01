@@ -4,6 +4,7 @@ draft: true
 tags:
   - "#update"
 date: <% tp.date.now("yyyy-MM-DD") %>
+lastmod: <% tp.date.now("yyyy-MM-DD") %>
 ---
 ## Housekeeping
 
