@@ -12,3 +12,5 @@ lastmod: <% tp.date.now("yyyy-MM-DD") %>
 - 
 ## Status Updates
 - 
+## Helpful Links
+[[todo-list|Site To-Do List]] | [[index|Home]]

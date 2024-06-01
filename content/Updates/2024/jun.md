@@ -11,4 +11,6 @@ lastmod: 2024-06-30
 ## Pages
 - Content Update: [[Essays/why-i-garden|Why I Garden]]; less wordy.
 ## Status Updates
-- 
+- I'm using a new section on the updates pages. See below.
+## Helpful Links
+[[todo-list|Site To-Do List]] | [[index|Home]]
