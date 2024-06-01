@@ -19,7 +19,7 @@ You're on a [[Misc/what-is-a-garden|Digital Garden]] dedicated to open-source us
 
 For a monthly list of what's new on the site, subscribe to the [Updates RSS feed](/Updates.xml).
 ## Important Links
-[[about-me|About Me]] | [[curated|Recommended Reading]] | [[Misc/disclaimers|Disclaimers/Terms of Use]] | [[/Updates|Monthly Changelog]] | <a rel="me" href="https://social.treehouse.systems/@be_far">Mastodon</a>
+[[about-me|About Me]] | [[curated|Recommended Reading]] | [[Misc/disclaimers|Disclaimers/Terms of Use]] | [[/Updates|Monthly Changelog]], [[todo-list|Up Next]] | <a rel="me" href="https://social.treehouse.systems/@be_far">Mastodon</a>
 
 <br/><br/>
 not legal advice 🤟

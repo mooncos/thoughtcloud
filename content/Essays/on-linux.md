@@ -53,23 +53,29 @@ I've had to retain a Windows dual-boot in order to use the exam software require
 
 First, the startup. Windows has quite a few non-privacy, non-furtive idiosyncrasies, but by far the most infuriating is how the system hitches for 3-4 minutes during and after login from a shutdown or reboot.
 ### Jumping Ship to Arch
-I started playing around with Arch on my 1TB expansion card when Fedora announced they were considering dropping X11 a few months ago. Interestingly, I ended up wanting to use Wayland with Arch anyway.
+I started playing around with Arch on my 1TB expansion card when Fedora announced they were considering dropping X11 a few months ago. Interestingly, I ended up wanting to use Wayland with Arch anyway. This turned out to be a mistake.
 #### Digital Extremes and Wonky Macros (DEs/WMs)
 I first tried Hyprland with a random sensible config I found on YouTube, and once I stripped out Kitty for Alacritty I quite liked it. The only issue was that toolbars on things like Firefox and Dolphin take up way too much screen real estate.
 
 Then, I added gnome and the gnome apps, was fun to try the newest gnome and see how well integrated with Wayland it was.
 
-And finally, I booted this back up once Plasma 6 dropped. Honestly, it's the first Plasma desktop that's actually looked good to me, so this will probably be what I swap to. Wayland was also great but it was less fault-tolerant than GNOME: I had to **enable kernel mode setting to get Plasma to work with Wayland NVIDIA multi-monitor.** 1.75x scaling on the Framework internal monitor and 1x on the 1080p worked like a charm.
+And finally, I booted this expansion card back up once Plasma 6 dropped. Honestly, it's the first Plasma desktop that's actually looked good to me. Wayland was also great, but Plasma was less fault-tolerant than GNOME: I had to **enable kernel mode setting to get Plasma to work with Wayland NVIDIA multi-monitor.** 1.75x scaling on the Framework internal monitor and 1x on the 1080p worked like a charm.
 
 I may also try [Niri](https://github.com/YaLTeR/niri) and [Karousel](https://github.com/peterfajdiga/karousel) soon if I upgrade to an ultrawide monitor.
+
+### Arch BTW
+Once I started encountering dependency hell on Fedora, I backed up my files and installed Arch. It's definitely a lengthier process than any other Linux install, and I'd forgotten everything from the two times I've installed it previously (once on a VM, once on my expansion card).
+
+I started on Plasma Wayland again. Here's the timeline:
+1. Plasma Wayland has some odd quirks, so I research workarounds to make it behave more like GNOME.
+2. Wayland has massive performance issues which I was unable to solve, so **Wayland is not yet usable for NVIDIA**. I swap to X11.
+3. X11 Plasma reveals some more usability issues with Plasma. It has a massively degraded experience when I'm using my laptop undocked for notes etc. I start using Wayland on the go and X11 at my desktop.
+4. Swapping between X11 and Wayland on logout has instability issues, probably due to something in SDDM (because I'm still using Plasma). I realize that I'm only having to deal with these issues because I'm holding on to plasma.
+5. I revert to X11 GNOME. All is right with the world, I only need the workarounds that make my eGPU work, and it's more familiar because I've already used it for almost a year.
+
+But aside from that roundabout, I've been navigating Arch just fine. I went into it knowing how to negate the most complained pitfall of Arch: that upgrading on a bleeding distro will break your system. To avoid this, I use BTRFS, which I can take snapshots of at any time that I can roll back to using `snapper`. And to make the process easier, I use `snap-pac`, which will automatically take those snapshots when running a `pacman` operation. Finally, to access these when my system is unbootable, `grub-btrfs` allows me to boot into a snapshot directly from the bootloader instead of having to try to mount it from an external OS. I've not yet had breakage, but it's good to have when a problem arises!
+- The only thing this doesn't really prevent is [grubpocalypse](https://bbs.archlinux.org/viewtopic.php?id=280246), but hopefully I don't ever run into a problem like that.
 #### Other Fun Times
-Having an installed OS that you can throw anything on without regard to breakage has been great for toying with whatever catches my fancy. This is actually where I experimented with (wip) [[Projects/vfio-pci|GPU passthrough to a Windows VM]].
+I really like my expansion card for installing toy OSes to. Having an installed OS that you can throw anything on without regard to breakage has been great for messing with whatever catches my fancy. This is actually where I experimented with (wip) [[Projects/vfio-pci|GPU passthrough to a Windows VM]].
 
 I've also been doing some Rust toolchain witchery on here but I'm not ready to write about it yet.
-#### Progress
-I've figured out what I want for my eventual install, just haven't done anything yet.
-- Desktop: Wayland
-- Greeter: SDDM
-- DE: Plasma 6
-- Theme: Graphite
-- Filesystem: BTRFS

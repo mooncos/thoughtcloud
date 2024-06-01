@@ -13,7 +13,7 @@ const config: QuartzConfig = {
     theme: {
       cdnCaching: true,
       typography: {
-        header: "Lora",
+        header: "Monaspace Neon",
         body: "Inter",
         code: "Fira Code",
       },
