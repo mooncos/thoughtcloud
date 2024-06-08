@@ -19,6 +19,7 @@ The date on this page will not be accurate in order to avoid spamming RSS feeds.
 - [ ] Everything you need to know to swap to Linux
 - [ ] Judicial-action
 - [ ] Add the third party doctrine to my-cloud
+- [ ] Add https://www.404media.co/google-leak-reveals-thousands-of-privacy-incidents/ to my-cloud
 - [ ] FPV
 - [ ] Keyboard writeup
 - [ ] Moving to FIDO2 and password managers

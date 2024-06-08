@@ -6,8 +6,11 @@ tags:
   - ai
 date: 2024-01-24
 draft: false
-lastmod: 2024-03-31
+lastmod: 2024-06-08
 ---
+> [!info]
+> **Update:** Since publication, GPT-4o was released with controversy over a celebrity voice being potentially appropriated. [[#Detour Her|-> Jump to: Her]]
+
 Here's an AI skeptic's legal take on the bill.
 
 The [No AI FRAUD Act](https://files.constantcontact.com/1849eea4801/695cfd71-1d24-4146-a453-3dab7d49babd.pdf) is a bipartisan House bill introduced by Florida Rep. Salazar and Pennsylvania Rep. Dean that's making waves. Both the [EFF](https://www.eff.org/deeplinks/2024/01/no-ai-fraud-act-creates-way-more-problems-it-solves) and [Techdirt](https://www.techdirt.com/2024/01/23/was-the-no-ai-fraud-act-written-by-a-fraudulent-ai-because-whoever-wrote-it-is-hallucinating/) have published pieces slamming the bill for stepping on the toes of the First Amendment and Section 230. Their pieces only properly address one problematic component of the bill, and completely ignore the positives of its current draft. Could its provisions be worded better? **Absolutely.** But that asks too much of our legislature, and most of the bill would be fine as-is. 
@@ -17,7 +20,7 @@ The [No AI FRAUD Act](https://files.constantcontact.com/1849eea4801/695cfd71-1d2
 ## Summary of the Bill
 Please read the [full text](https://files.constantcontact.com/1849eea4801/695cfd71-1d24-4146-a453-3dab7d49babd.pdf) yourself! This summary restructures the text and omits several legal concepts in favor of simplicity. The most important points are bolded. In effect, the bill:
 - Establishes a transferable federal publicity right in one's voice and likeness that extends beyond death that **steps past a website's Section 230 immunity** from most suits concerning user content
-- Creates a private cause of action against:system
+- Creates a private cause of action against:
 	- Proprietors of "personalized cloning services": software with the primary purpose of producing digital voice replicas/depictions
 	- Anyone who releases an unauthorized digital voice replica/depiction
 	- For both of the above, a disclaimer saying that the person depicted/replicated is not affiliated is not a defense
@@ -63,7 +66,7 @@ There is an argument that senators included limiting language elsewhere, which w
 
 Again, the concern implicit in the articles is that this bill might have adverse effects outside of AI. In a situation like the hypo above: on top of being a plainly unconstitutional application (I'll talk about that more in the First Amendment section), the statute would probably not textually apply at all. 
 
-The arguments made by EFF and the Techdirt article seem to only apply to the replication/depiction offenses and not the cloning service part(since the "primary purpose" language is very hard to satisfy outside of the statute's intent). For those replication offenses, the act defines the key terms as:
+The arguments made by EFF and the Techdirt article seem to only apply to the replication/depiction offenses and not the cloning service part (since the "primary purpose" language is very hard to satisfy outside of the statute's intent). For those replication offenses, the act defines the key terms as:
 - "digital voice replica": audio created or altered in whole or part by computer software; that contains a replica, imitation, or approximation of an individual that was not actually performed by that person.
 	- Awkwardly worded for sure.
 - "digital depiction": a replica, imitation, or approximation of someone's likeness created or altered using computer software.
@@ -78,18 +81,36 @@ First, this would clearly be against Congressional intent. The bill was introduc
 
 On the other hand, when you sing into a microphone to make a song in Ableton, the computer software isn't what's creating the audio; **you** are creating the sound. I do think that the alteration with computer software argument is easier to make because of things like picture filters and voice post-processing, but judges are typically hesitant to dictate an "even a scintilla of \<insert quantifiable statutory element\>" approach for any statute. That kind of logic lends itself too easily to frivolous or Congressionally-unsanctioned (!!) lawsuits that could toe the line of SLAPP. The EFF's position argues that the only interpretation of this statute is one that would probably be considered **unworkable** by most judges.
 - Speaking of credit to judges, I actually think the often-lacking tech literacy of judges makes the no-creation argument easier to make, and easier to push the human-AI divide in who's actually creating. Obviously if a human creates the sound, then it's not created with digital software. And the human element means that you can tell a story and answer an important question: "why?"
+### Detour: Her
+Below is a statement from Scarlett Johansson:
+![[Attachments/her.png]]
+
+> [!warning]
+> This statement leaves out a detail. Sky was released in September (the month that OpenAI reached out to Scarlett), but gained widespread public attention in the May announcement. h/t [Timothy Lee](https://www.understandingai.org/p/johanssons-beef-with-openai-points)
+> 
+> I don't think it makes much difference; the likely eventuality is that both times Scarlett was contacted before a publicity event that would feature a model inspired by (and possibly cloned from) her voice. Additionally, given tech bro culture ("go fast break shit"), I think both times the AI model had already been trained on her voice and presented to Altman in a finished state.
+
+Given my position as stated, I think that OpenAI would be liable for creating an unauthorized digital voice replica **only if** this AI was indeed trained on Scarlett Johansson's voice.
+- Sidebar: the statute obviously was not in force at the time of the controversy here. If it was passed tomorrow to go into effect on the same day, it wouldn't cover anything previous.
+
+This scenario seems like one of the specific fact patterns that the No AI FRAUD Act was introduced to dispense with. If we look at the statutory elements, I think that voice responses from GPT-4o with the Sky model are what infringes. Those audio clips are "created" by the AI/"computer software" from its model, and contain a "replica" of Johansson's voice.
+
+Obviously, this analysis gets messier when you factor in what the statute says about "imitation" and "approximation," because there's the possibility that instead OpenAI used an impersonator. But I think that there's a strong argument that since it would **not** be a replica of Scarlett's voice, the harm caused to her does not outweigh the factors discussed in the next section.
 ## Perfectly Balanced\[?\]
 This was a weird one to analyze for me, because the EFF kind of just...Didn't read the balancing test properly? They conflate it with a lot of the broader First Amendment commentary around the bill, which feels distinct from the balance-of-the-harms section (despite its inclusion as a balancing factor). I do agree that **the balance is effectively mini-copyright fair use**. However, it's not precisely fair use for an important reason. Let's go through the exclusive (as opposed to illustrative like in copyright fair use) factors one by one. 
 #### Relevance to primary expressive purpose
 If this section feels less grounded than the rest, that's because it is. Factors are inherently squishy to analyze, absent lots of time for the doctrine to dig a trench. I think that's what the drafters were trying to leapfrog by lifting from established doctrine, but I question their choice of principle.
 
-This is one of the two fair use factors in this statute's balance. And of the two, relevance feels more at-home when talking about AI use. If you're just throwing an unauthorized AI-generated picture of Prince into your work because it looked good (was that a Warhol reference?), is it really a choice worth protecting? This factor will ensure that if you're risking the harms of making someone say/appear on something they didn't approve, you've at least got a good reason for it. If taken to the extreme, it could require the use of AI to be strictly necessary to the message of your replica. I doubt that extreme would happen, but if it did, then the EFF's treatment of this section as a First Amendment issue would make more sense, since that would absolutely guarantee the AI use in that specific case's status as protected expression. However, factors like this are almost never interpreted to their limits, as courts would rather balance everything than cabin one factor and label it dispositive. Again, factors are squishy. 
+This language is from trademark cases, and is tied to a First Amendment side of a doctrine called "trademark fair use." For example, you can't be sued by big-name performers for use of their name in your movie because the movie is about showbusiness characters who made a living imitating those big-name performers. [*Rogers v. Grimaldi*](https://law.justia.com/cases/federal/district-courts/FSupp/695/112/2345732/).
+
+Of the two fair use factors in this balance, relevance feels more at-home when talking about AI use. If you're just throwing an unauthorized AI-generated picture of Prince into your work because it looked good (was that a Warhol reference?), is it really a choice worth protecting? This factor will ensure that if you're risking the harms of making someone say/appear on something they didn't approve, you've at least got a good reason for it. If taken to the extreme, it could require the use of AI to be strictly necessary to the message of your replica. I doubt that extreme would happen, but if it did, then the EFF's treatment of this section as a First Amendment issue would make more sense, since that would absolutely guarantee the AI use in that specific case's status as protected expression. However, factors like this are almost never interpreted to their limits, as courts would rather balance everything than cabin one factor and label it dispositive. Again, factors are squishy. 
 
 If I had been asked to adapt fair use to publicity rights, I would have probably also brought in unfair-competition law by including the market effect factor. There are a lot of cases in competition that cover parties whose content doesn't fit traditional utility-or-authorship models (like the news as news), and the mature  principles there would be some less shaky ground for interpretation compared to the rest of this bill. If that were the case, this balance might be considered the primary part of this bill as opposed to the offenses (like how fair use is the headline issue in copyright actions).
+- Sidebar: the Johansson controversy discussed earlier is a good example of where this factor would apply. When OpenAI was unable to procure the celebrity they wanted through the free market, they appropriated her voice, which harms her own ability to monetize her voice the way she chooses.
 
 I definitely wouldn't have included the second fair use factor, though.
 #### Transformative nature
-What place does an analysis of transformation have in generative AI? In my opinion, none. The fact that these works are not a perfect reflection of their subject is the whole danger: that dissonance can cause a . Given this premise, I think the *lack* of transformative nature and instead identically tracking the subject, *i.e.*, closely comporting with something the subject has actually said/done/would endorse/has previously endorsed, would be a better factor.
+What place does an analysis of transformation have in generative AI? In my opinion, none. The fact that these works are not a perfect reflection of their subject is the whole danger: that dissonance can cause a mismatch between what a person would really say and what someone else could attribute to them by using AI. Given this premise, I think the *lack* of transformative nature and instead identically tracking the subject, *i.e.*, closely comporting with something the subject has actually said/done/would endorse/has previously endorsed, would be a better factor.
 #### Constitutionally protected expression
 This is a First Amendment concern, and it's probably mandatory to interpret it as dispositive as a result. First Amendment defenses are implicit in EVERY statute, so saying it out loud isn't really required. More on this in the [[#The First Amendment Defense|First Amendment]] section.
 #### Final Thoughts
