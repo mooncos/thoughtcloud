@@ -4,6 +4,7 @@ tags:
   - project
   - seedling
   - difficulty-advanced
+  - linux
 date: 2024-03-17
 lastmod: 2024-03-18
 draft: false

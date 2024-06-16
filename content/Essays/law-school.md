@@ -16,7 +16,7 @@ Law school is a concept that deserves scrutiny, both as an institution and for t
 I don't have a central thesis for this entry, and there isn't really anything profound about the content. I just want to point out what law school does wrong and suggest some alternatives that do or should improve the experience for students.
 
 > [!hint]  Law school as a process *usually* looks like this:
-> Take the [[Misc/lsat|entrance exam]] $\rightarrow$ apply  $\rightarrow$ first semester $\rightarrow$ 1L job offer $\rightarrow$ Second semester $\rightarrow$ 1L summer job $\rightarrow$ 2L job offer $\rightarrow$ second year $\rightarrow$ 2L summer job $\rightarrow$ career offer $\rightarrow$ third year $\rightarrow$ career.
+> Take the [[Misc/lsat|entrance exam]] -> apply  -> first semester -> 1L job offer -> Second semester -> 1L summer job -> 2L job offer -> second year -> 2L summer job -> career offer -> third year -> career.
 > 
 > Sometimes, the timing of job offers will be delayed, as it depends on the type of employment pursued. I talk about this more in the [[#Job Prospects]] section.
 ## Applying

@@ -1,6 +1,9 @@
 ---
 title: NVIDIA on Linux
-tags: 
+tags:
+  - linux
+  - difficulty-easy
+  - foss
 date: 2024-03-26
 lastmod: 2024-05-19
 draft: false

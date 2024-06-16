@@ -5,7 +5,8 @@ tags:
   - essay
   - difficulty-moderate
   - seedling
-date: 9-08-23
+  - linux
+date: 2023-08-23
 ---
 A list of things that I do with cloud servers.
 

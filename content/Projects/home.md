@@ -16,5 +16,5 @@ I assign each project a difficulty level out of the following list:
 
 ## Other Open-Source Contributions
 - [[Projects/zotero-lexis-plus|A Lexis+ translator for Zotero.]]
-- [[Projects/rss-foss|Advancing the development of RSS/Atom]]
+- [[Projects/rss-foss|Advancing the development of RSS and Atom]]
 - [[Projects/rsgistry|rsgistry]], a Rustlang full-stack registry generator for your ecosystem's community extensions
