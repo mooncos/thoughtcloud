@@ -11,7 +11,7 @@ const config: QuartzConfig = {
     defaultDateType: "modified",
     pageTitle: "🌱 Projects 🌓 Privacy",
     enableSPA: true,
-    enablePopovers: true,
+    enablePopovers: false, // https://github.com/jackyzha0/quartz/issues/890
     analytics: null,
     baseUrl: "be-far.com",
     ignorePatterns: ["private", "**/templates"],

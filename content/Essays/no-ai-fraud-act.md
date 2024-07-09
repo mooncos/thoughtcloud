@@ -6,10 +6,10 @@ tags:
   - ai
 date: 2024-01-24
 draft: false
-lastmod: 2024-06-08
+lastmod: 2024-07-08
 ---
-> [!info]
-> **Update:** Since publication, GPT-4o was released with controversy over a celebrity voice being potentially appropriated. [[#Detour Her|-> Jump to: Her]]
+> [!info] **Update**
+> Since publication, GPT-4o was released with controversy over a celebrity voice being potentially appropriated. [[#Detour Her|-> Jump to: Her]]
 
 Here's an AI skeptic's legal take on the bill.
 
@@ -84,6 +84,19 @@ On the other hand, when you sing into a microphone to make a song in Ableton, th
 ### Detour: Her
 Below is a statement from Scarlett Johansson:
 ![[Attachments/her.png]]
+
+> [!info]- Alt text for image
+> "Last September, I received an offer from Sam Altman, who wanted to hire me to voice the current ChatGPT 4.0 system. He told me that he felt that by my voicing the system, I could bridge the gap between tech companies and creatives and help consumers to feel comfortable with the seismic shift concerning humans and Al. He said he felt that my voice would be comforting to people.
+>
+> After much consideration and for personal reasons, I declined the offer. Nine months later, my friends, family and the general public all noted how much the newest system named "Sky" sounded like me.
+>
+> When I heard the released demo, I was shocked, angered and in disbelief that Mr. Altman would pursue a voice that sounded so eerily similar to mine that my closest friends and news outlets could not tell the difference. Mr. Altman even insinuated that the similarity was intentional, tweeting a single word "her" - a reference to the film in which I voiced a chat system, Samantha, who forms an intimate relationship with a human.
+>
+Two days before the ChatGPT 4.0 demo was released, Mr. Altman contacted my agent, asking me to reconsider. Before we could connect, the system was out there.
+>
+> As a result of their actions, I was forced to hire legal counsel, who wrote two letters to Mr. Altman and OpenAl, setting out what they had done and asking them to detail the exact process by which they created the "Sky" voice. Consequently, OpenAl reluctantly agreed to take down the "Sky" voice.
+>
+> In a time when we are all grappling with deepfakes and the protection of our own likeness, our own work, our own identities, I believe these are questions that deserve absolute clarity. I look forward to resolution in the form of transparency and the passage of appropriate legislation to help ensure that individual rights are protected. "
 
 > [!warning]
 > This statement leaves out a detail. Sky was released in September (the month that OpenAI reached out to Scarlett), but gained widespread public attention in the May announcement. h/t [Timothy Lee](https://www.understandingai.org/p/johanssons-beef-with-openai-points)

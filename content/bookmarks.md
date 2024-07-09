@@ -10,11 +10,12 @@ lastmod: 2024-03-07
 One of the core philosophies of digital gardening is that one should document their learning process when trying new things. As such, here's my very disorganized to-dos and to-reads in the form of a public bookmark list. This page will change very often.
 
 - [Nyxt Browser](https://nyxt.atlas.engineer/)
+- [The Heat Death of the Internet](https://www.takahe.org.nz/heat-death-of-the-internet/)
 - [Moogle Matrix Macropad](https://mommidearest.github.io/Keyboard-Diary/2024/02/29/Moogle-Matrix.html)
 - [Nix Flakes: An Introduction](https://xeiaso.net/blog/nix-flakes-1-2022-02-21/)
-- [Passkey Support](https://www.passkeys.io/who-supports-passkeys)
 - [Academish Voice](https://inkandswitch.notion.site/Academish-Voice-0d8126b3be5545d2a21705ceedb5dd45)
 ## Historical
+- [Passkey Support](https://www.passkeys.io/who-supports-passkeys)
 - https://www.shuttle.rs/
 - [lazy.nvim plugin spec](https://github.com/folke/lazy.nvim#-plugin-spec)
 - [3D printer troubleshooting](https://www.simplify3d.com/resources/print-quality-troubleshooting/)
