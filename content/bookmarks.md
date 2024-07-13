@@ -9,6 +9,7 @@ lastmod: 2024-03-07
 ---
 One of the core philosophies of digital gardening is that one should document their learning process when trying new things. As such, here's my very disorganized to-dos and to-reads in the form of a public bookmark list. This page will change very often.
 
+- [YouTube: Tech for Tea - The Mess that is Application Theming](https://youtube.com/watch?v=HqlwUjogMSM)
 - [Nyxt Browser](https://nyxt.atlas.engineer/)
 - [The Heat Death of the Internet](https://www.takahe.org.nz/heat-death-of-the-internet/)
 - [Moogle Matrix Macropad](https://mommidearest.github.io/Keyboard-Diary/2024/02/29/Moogle-Matrix.html)
