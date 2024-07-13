@@ -1,14 +1,14 @@
 ---
 title: Automation and the Law
 tags:
-- legal
-- programming
-- difficulty-easy
-- project
-- python
-- powertoys
+  - legal
+  - programming
+  - difficulty-easy
+  - project
+  - python
+  - powertoys
 date: 2024-07-08
-lastmod: 2024-07-08
+lastmod: 2024-07-13
 draft: false
 ---
 I think that knowing or having access to the knowledge to learn basic automation is valuable to the practice of law, and this entry is real-world proof of that. None of that "Here's how AI can increase your productivity!" nonsense. Even if you don't want to spend the time learning to code, decomposing the task at hand into a sequence of steps can help you plan how to attack it or spot areas to improve your efficiency.
