@@ -9,9 +9,6 @@ tags:
 draft: true
 date: 9-08-23
 ---
-
-I built two mechanical keyboards in the past month. Here's what I learned.
-
 ## The Problem
 
 I have two areas where I use keyboards. My home desk, and my work. 
@@ -20,11 +17,16 @@ At home, I had a "gaming keyboard", which was starting to become unbearable. It 
 
 And at work, I had a generic membrane keyboard that always felt off no matter how I positioned it. Obviously, a change was needed.
 
-I do still like a quieter typing experience, as long as it feels alright to my fingers. So I decided to go with newer silent switches.
-
+As such, I did what I do best, and I hyperfixated. I have now built two mechanical keyboards in the past month, and I'm very happy with them! Here's what I learned. There are three basic components to a keyboard build:
 ## Switches
 
-I've previously 
+I've previously tested all different kinds of switches.  A switch's sound and feel falls into three different categories:
+- Linear: Most people will have experienced this with a cheap HP membrane keyboard at their work or school. For those that haven't, it's a much longer travel compared to the flat, short press of a laptop keyboard or similar "scissor switch" keyboards. The amount of force needed to press it down is the same throughout the keypress.
+- Tactile: Unlike a linear switch, somewhere in the keystroke, a tactile switch will feature a 'bump' where the force required increases and decreases. A **D-shape** bump will be in the middle of the stroke, a **P-shape** bump will be at the end of the stroke. 
+	- I think a D-shape should be called a thorn bump, but I'm weird.
+- Clicky: instead of the tactile bump, where the change is mostly in feel (and the added force of the bump makes *you* cause the noise), clicky switches have a separate metal tang that gets compressed and snapped against another piece of metal during the stroke. This produces a sharp metallic sound and unique feel that some people enjoy.
+
+Personally, I like 
 
 ### Tech Detour
 
