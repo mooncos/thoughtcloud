@@ -4,12 +4,9 @@ tags:
   - toc
   - misc
 date: 2023-08-23
+lastmod: 2024-07-28
 ---
 Things which I didn't really have a category for.
-
-## Definitions/glossaries
--  [[linux-isms|Linux-isms]]: A glossary of the linux terms I've used.
-- [[what-is-a-garden|What is a Garden?]]: The definitions of "digital garden" that I like most.
-- [[lsat|LSAT]]
-## Others
 - [[keys|Key Layouts]]: Sometimes, a good solution starts as a technical necessity.
+- [[Misc/legal-names|Legal Names]]: A collection of silly names for things, law and tech puns.
+- [[Misc/disclaimers|Disclaimers]]: Terms of Use of the site, how I go about writing and editing on this site.

@@ -22,7 +22,7 @@ Traditionally, the Linux community is known for being hostile to newcomers. But 
 > [!info] Need [[digital-garden#Using this Site|help navigating]] my site?
 
 ## Scope
-I've been daily driving Linux for a combined total of 1.5 years, chronicled [[Essays/on-linux|here]]. I want this entry to serve as a starting point that explains Linux from zero, but I'll try to avoid reinventing the wheel. Many people have written or produced content on . It'll be updated over time. If anything is confusing or if I miss an important topic, please let me know! A [[Misc/what-is-a-garden|digital garden]] is an iterative process.
+I've been daily driving Linux for a combined total of 1.5 years, chronicled [[Essays/on-linux|here]]. I want this entry to serve as a starting point that explains Linux from zero, but I'll try to avoid reinventing the wheel. Many people have written or produced content on . It'll be updated over time. If anything is confusing or if I miss an important topic, please let me know! A [[Dict/what-is-a-garden|digital garden]] is an iterative process.
 ## Basic knowledge
 Linux is designed for someone already familiar with one variant to be able to make certain assumptions about any other Linux system. This is more of a guideline to modern design choices than an actual rule. 
 ### What the operating system is
@@ -41,7 +41,7 @@ Jokes aside, there's a grain of truth in that statement. Linux—the operating s
 
 Many of these are compartmentalized and can only interact with each other in well-defined ways. This document is going to focus on the parts you'll touch the most as an everyday user: primarily userspace 
 
-Linux grew out of a collection of operating system standards called POSIX. Most of those standards pertain to how the system behaves when you interact with it through a [[Misc/shell#The Terminal|terminal]]. But when the open source community got involved with its development, its design had to evolve in a way that could satisfy group "consensus," and could handle many groups developing all its different facets asynchronously.
+Linux grew out of a collection of operating system standards called POSIX. Most of those standards pertain to how the system behaves when you interact with it through a [[Dict/shell#The Terminal|terminal]]. But when the open source community got involved with its development, its design had to evolve in a way that could satisfy group "consensus," and could handle many groups developing all its different facets asynchronously.
 
 ### Installing programs
 

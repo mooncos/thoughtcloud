@@ -7,7 +7,8 @@ tags:
   - difficulty-easy
   - seedling
 draft: true
-date: 9-08-23
+date: 2024-07-25
+lastmod: 2024-07-25
 ---
 ## The Problem
 

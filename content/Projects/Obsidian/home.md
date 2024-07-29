@@ -6,6 +6,7 @@ tags:
   - cloud
   - notes
 date: 2023-08-23
+lastmod: 2024-07-28
 ---
 Hoo boy. This project needs its entire own folder structure because of the sheer amount of components I have going.
 
@@ -17,4 +18,4 @@ I think my use is divided into three easily separable parts:
 	- These are accessible from any device that can run an Obsidian client.
 	- I just use it currently on my laptop and phone.
 - [[digital-garden|Digital Garden]]: This website. 
-	- It's secretly just run out of a folder in my ^ LiveSync'ed notes repository that I have [[linux-isms#Symlink|symlinked]] into my laptop's local repository for Quartz. 
+	- It's secretly just run out of a folder in my ^ LiveSync'ed notes repository that I have [[Dict/symlink|symlinked]] into my laptop's local repository for Quartz. 

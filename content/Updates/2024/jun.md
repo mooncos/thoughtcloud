@@ -16,4 +16,4 @@ This didn't technically happen in June, but it is why I've been under a rock for
 ## Status Updates
 - I'm using a new section on the updates pages. See below.
 ## Helpful Links
-[[todo-list|Site To-Do List]] | [[index|Home]]
+[[todo-list|Site To-Do List]] | [[Garden/index|Home]]

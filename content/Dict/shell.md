@@ -4,12 +4,10 @@ tags:
   - linux
   - resources
   - misc
+  - glossary
 date: 2024-06-08
-lastmod: 2024-06-08
+lastmod: 2024-07-28
 ---
-> [!info]
-> This is a separate entry to the normal [[Misc/linux-isms|misc Linux page]] because I don't think I can make it concise enough for a few bullet points. 
-
 The UNIX shell is a layer in between you and the operating system kernel (page on that todo!). Through shell programs, you can navigate, edit, and manipulate the files and peripherals on your computer. It's like a portal to what's really happening behind all the graphics.
 
 ## Shell and Shell Accessories

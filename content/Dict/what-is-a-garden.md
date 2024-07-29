@@ -3,7 +3,7 @@ title: What is a Garden?
 tags:
   - glossary
   - misc
-date: 9-08-23
+date: 2023-08-23
 ---
 # Definitions
 > A digital garden is an online space at the intersection of a notebook and a blog, where digital gardeners share seeds of thoughts to be cultivated in public.
@@ -18,4 +18,4 @@ date: 9-08-23
 >
 > \- [Appleton](https://maggieappleton.com/garden-history) (emphasis in original)
 
-These two are the definitions I most commonly subscribe to, as they very closely track the reasons [[why-i-garden|Why I Garden]]. 
+These two are the definitions I most commonly subscribe to, as they very closely track the reasons [[Essays/why-i-garden|Why I Garden]]. 
