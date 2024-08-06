@@ -1,10 +1,10 @@
 ---
 title: 07/24 - Summary of Changes
-draft: true
+draft: false
 tags:
   - "#update"
 date: 2024-07-08
-lastmod: 2024-07-31
+lastmod: 2024-08-05
 ---
 ## Housekeeping
 At some point this decade, I'd like to stop living through major historical events, please.
