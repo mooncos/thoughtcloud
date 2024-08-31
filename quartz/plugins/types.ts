@@ -4,8 +4,7 @@ import { ProcessedContent } from "./vfile"
 import { QuartzComponent } from "../components/types"
 import { FilePath } from "../util/path"
 import { BuildCtx } from "../util/ctx"
-import { Options } from "vfile"
-import { IOptions } from "reading-time"
+import DepGraph from "../depgraph"
 
 export interface PluginTypes {
   transformers: QuartzTransformerPluginInstance[]
