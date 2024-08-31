@@ -5,7 +5,7 @@ tags:
   - misc
   - seedling
 date: 2024-02-28
-lastmod: 2024-02-28
+lastmod: 2024-08-31
 ---
 Rust's [[Programs I Like/functional-programming|functional patterns]] are great, but sometimes you need to get weird. What if you want to construct a struct type, but you (the programmer) don't know what types the fields will be while you're writing this? Rust has you covered in situations just like this one.
 
@@ -31,16 +31,16 @@ This macro creates a function at compile time as a member of the struct in `inpu
 There's also a way to iterate `Vec<>` inside macros with the `*` repetition operator. This operator has two parts, a body and a separator, but I couldn't find a satisfactory tutorial online. Here's my attempt:
 ```rust
 quote!{
-	#(let #some_vec = 5);*
+	#(let #some_vec = 5;) *
 }
 ```
 
 Here, everything inside the `#()`  parenthetical will be repeatedly generated for each element of `some_vec`, with `#some_vec` expanding to the element at the current index. Presumably it contains the `Ident` s of some variable names of type `i32` that we want to declare and assign 5 to all of them in our macro. An expansion might look like:
 ```rust
-let x = 5;let y = 5;let z = 5;
+let x = 5; let y = 5; let z = 5;
 ```
 
-It's okay that it's not pretty because the compiler will see it as valid anyway.
+Note that there will not be a space after the last semicolon, because the space is only a separator (goes between the elements), where the semicolon is part of the body (goes in every element).
 ## \#\[proc_macro_derive()\]
 [Rust traits](https://doc.rust-lang.org/book/ch10-02-traits.html) are powerful inheritance-like features that let the compiler know it can expect the "deriving" types to behave in the same way. What if you could generate trait implementations with a macro on the deriving type?
 

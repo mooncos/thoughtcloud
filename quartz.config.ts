@@ -25,13 +25,13 @@ const config: QuartzConfig = {
       },
       colors: {
         lightMode: {
-          light: "#EEEFFF", // Backg
+          light: "#F2F2F2", // Backg
           lightgray: "#bcc0cc", // Code Backg
           gray: "#8c8fa1", // Unread nodes and subtitles
           darkgray: "#45485f", // Text
           dark: "#4c4f69", // Code text
-          secondary: "#40a02b", // Links, title, and current node
-          tertiary: "#209fb5", // Visited nodes
+          secondary: "#325738", // Links, title, and current node
+          tertiary: "#0E8390", // Visited nodes
           highlight: "rgba(143, 159, 169, 0.15)",
         },
         darkMode: {
@@ -66,6 +66,7 @@ const config: QuartzConfig = {
       Plugin.CrawlLinks({ markdownLinkResolution: "shortest" }),
       Plugin.Description(),
       Plugin.Remark42({ host: "https://be-far.com/comments", site_id: "remark", theme: "dark", no_footer: true }),
+      Plugin.Latex({renderEngine: "katex"})
     ],
     filters: [Plugin.RemoveDrafts()],
     emitters: [

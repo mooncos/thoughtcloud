@@ -7,7 +7,7 @@ tags:
   - seedling
   - essay
 date: 2023-08-23
-lastmod: 2024-03-17
+lastmod: 2024-08-31
 ---
 > [!hint]  This page documents my many adventures with Linux and why I enjoy it.
 > If you're looking to get involved with Linux, feel free to browse the [[Resources/learning-linux|resources for that purpose]] that I've compiled.
@@ -56,6 +56,7 @@ First, the startup. Windows has quite a few non-privacy, non-furtive idiosyncras
 I started playing around with Arch on my 1TB expansion card when Fedora announced they were considering dropping X11 a few months ago. Interestingly, I ended up wanting to use Wayland with Arch anyway. This turned out to be a mistake.
 #### Digital Extremes and Wonky Macros (DEs/WMs)
 I first tried Hyprland with a random sensible config I found on YouTube, and once I stripped out Kitty for Alacritty I quite liked it. The only issue was that toolbars on things like Firefox and Dolphin take up way too much screen real estate.
+- Kitty and Hyprland have maintainers that are not reflective of the community that uses Linux. Kitty’s is just opinionated, but for the latter I would follow the sentiment of the Freedesktop community (who banned the creator of the WM, leaving the project without any support from the Wayland side) and **avoid Hyprland.** Alternatives are [River](https://codeberg.org/river/river) and the [[Garden/Programs I Like/home#Suckless software|suckless]] project [dwm](https://dwm.suckless.org/).
 
 Then, I added gnome and the gnome apps, was fun to try the newest gnome and see how well integrated with Wayland it was.
 
@@ -68,14 +69,19 @@ Once I started encountering dependency hell on Fedora, I backed up my files and 
 
 I started on Plasma Wayland again. Here's the timeline:
 1. Plasma Wayland has some odd quirks, so I research workarounds to make it behave more like GNOME.
-2. Wayland has massive performance issues which I was unable to solve, so **Wayland is not yet usable for NVIDIA**. I swap to X11.
+2. Wayland has massive performance issues which I was unable to solve, so **Wayland is not yet usable for NVIDIA** { *last attempt at NVIDIA Wayland: August 2024* }. I swap to X11.
 3. X11 Plasma reveals some more usability issues with Plasma. It has a massively degraded experience when I'm using my laptop undocked for notes etc. I start using Wayland on the go and X11 at my desktop.
 4. Swapping between X11 and Wayland on logout has instability issues, probably due to something in SDDM (because I'm still using Plasma). I realize that I'm only having to deal with these issues because I'm holding on to plasma.
 5. I revert to X11 GNOME. All is right with the world, I only need the workarounds that make my eGPU work, and it's more familiar because I've already used it for almost a year.
 
 But aside from that roundabout, I've been navigating Arch just fine. I went into it knowing how to negate the most complained pitfall of Arch: that upgrading on a bleeding distro will break your system. To avoid this, I use BTRFS, which I can take snapshots of at any time that I can roll back to using `snapper`. And to make the process easier, I use `snap-pac`, which will automatically take those snapshots when running a `pacman` operation. Finally, to access these when my system is unbootable, `grub-btrfs` allows me to boot into a snapshot directly from the bootloader instead of having to try to mount it from an external OS. I've not yet had breakage, but it's good to have when a problem arises!
 - The only thing this doesn't really prevent is [grubpocalypse](https://bbs.archlinux.org/viewtopic.php?id=280246), but hopefully I don't ever run into a problem like that.
+
+Overall, Arch has been a great experience for me. ==ABOUT: how the AUR makes you a more careful package installer== 
 #### Other Fun Times
 I really like my expansion card for installing toy OSes to. Having an installed OS that you can throw anything on without regard to breakage has been great for messing with whatever catches my fancy. This is actually where I experimented with (wip) [[Projects/vfio-pci|GPU passthrough to a Windows VM]].
 
 I've also been doing some Rust toolchain witchery on here but I'm not ready to write about it yet.
+
+### What's Next?
+I'm tracking [SerpentOS](https://serpentos.com/). It looks to be a ground-up attempt at incorporating advantages of unbreakable/immutable distros into the typical rolling-release model. This would take away the need for my workaround on Arch like snapshots, because that feature is baked into their package manager `moss` in a performant feature called 'transactions'. It's from the creator of Solus, so it's guaranteed to be good. Once they have maintainers and a 1.0 release, I'll try it out!
