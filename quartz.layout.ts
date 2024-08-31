@@ -9,7 +9,7 @@ export const sharedPageComponents: SharedLayout = {
   footer: Component.Footer({
     links: {
       "Source code": "https://github.com/bfahrenfort/quartz",
-      "RSS": "https://be-far.com/index.xml"
+      RSS: "https://be-far.com/index.xml",
     },
     //remark_config: config.plugins.transformers.find((e) => {e.name === "Remark42"})?.options
   }),
