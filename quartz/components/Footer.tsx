@@ -14,7 +14,6 @@ export default ((opts?: Optionss) => {
     const links = opts?.links ?? []
     return (
       <footer class={`${displayClass ?? ""}`}>
-        <hr />
         <p style="margin-bottom:4px;font-weight:bold;font-size:2em;">
           Share your thoughts with{" "}
           <a class="internal" href="/Projects/Obsidian/quartz-comments">
