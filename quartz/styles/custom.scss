@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: "Monaspace Neon";
-  src: url('/static/fonts/heading-font.otf') format('opentype');
+  src: url("/static/fonts/heading-font.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -10,7 +10,7 @@
 
 @font-face {
   font-family: "Monaspace Argon";
-  src: url('/static/fonts/main-font.otf') format('opentype');
+  src: url("/static/fonts/main-font.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -111,7 +111,6 @@ footer > p {
   margin-left: 8px;
   margin-right: 8px;
 }
-
 
 ul {
   margin-top: 2px;

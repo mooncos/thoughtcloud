@@ -215,12 +215,28 @@ export function renderPage(
   const lang = componentData.fileData.frontmatter?.lang ?? cfg.locale?.split("-")[0] ?? "en"
   const doc = (
     <html lang={lang}>
-      <Head {...componentData}/>
+      <Head {...componentData} />
       <head>
-        { slug === "index" ? 
-          <link rel="alternate" type="application/rss+xml" href="/index.xml" title="Newest in Projects & Privacy"/>: <></>}
-        { slug === "index" ? 
-          <link rel="alternate" type="application/rss+xml" href="/Updates.xml" title="Projects & Privacy Monthly"/>: <></>}
+        {slug === "index" ? (
+          <link
+            rel="alternate"
+            type="application/rss+xml"
+            href="/index.xml"
+            title="Newest in Projects & Privacy"
+          />
+        ) : (
+          <></>
+        )}
+        {slug === "index" ? (
+          <link
+            rel="alternate"
+            type="application/rss+xml"
+            href="/Updates.xml"
+            title="Projects & Privacy Monthly"
+          />
+        ) : (
+          <></>
+        )}
       </head>
       <body data-slug={slug}>
         <div id="quartz-root" class="page">
@@ -234,11 +250,8 @@ export function renderPage(
                   ))}
                 </Header>
                 <div class="popover-hint">
-                  { slug !== "index" && 
-                    beforeBody.map((BodyComponent) => 
-                      (<BodyComponent {...componentData} />)
-                      )
-                  }
+                  {slug !== "index" &&
+                    beforeBody.map((BodyComponent) => <BodyComponent {...componentData} />)}
                 </div>
               </div>
               <Content {...componentData} />

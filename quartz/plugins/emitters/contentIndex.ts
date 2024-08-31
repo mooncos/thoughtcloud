@@ -85,9 +85,9 @@ function generateRSSFeed(cfg: GlobalConfiguration, idx: ContentIndex, limit?: nu
     <channel>
       <title>${escapeHTML(cfg.pageTitle)}</title>
       <link>${base}</link>
-      <description>${!!limit ? `Last ${limit} notes` : "Recent notes"} on ${
-        escapeHTML(cfg.pageTitle)
-      }</description>
+      <description>${!!limit ? `Last ${limit} notes` : "Recent notes"} on ${escapeHTML(
+        cfg.pageTitle,
+      )}</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       ${items}
     </channel>
@@ -120,7 +120,12 @@ export const ContentIndex: QuartzEmitterPlugin<Partial<Options>> = (opts) => {
     },
     async emit(ctx, content, _resources) {
       // If we're missing an index file, don't bother with sitemap/RSS gen
-      if (!(opts?.bypassIndexCheck || content.map((c) => c[1].data.slug!).includes("index" as FullSlug))) {
+      if (
+        !(
+          opts?.bypassIndexCheck ||
+          content.map((c) => c[1].data.slug!).includes("index" as FullSlug)
+        )
+      ) {
         console.warn(
           chalk.yellow(`Warning: contentIndex: 
   content/ folder is missing an index.md. RSS feeds and sitemap will not be generated.

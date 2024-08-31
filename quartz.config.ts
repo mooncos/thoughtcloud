@@ -13,6 +13,7 @@ const config: QuartzConfig = {
     enableSPA: true,
     enablePopovers: false, // https://github.com/jackyzha0/quartz/issues/890
     analytics: null,
+    locale: "en-US",
     baseUrl: "be-far.com",
     ignorePatterns: ["private", "**/templates"],
     theme: {
@@ -36,7 +37,7 @@ const config: QuartzConfig = {
           textHighlight: "#fff23688",
         },
         darkMode: {
-          light: "#131829",// Backg
+          light: "#131829", // Backg
           lightgray: "#70778F", // Code Backg
           gray: "#686D82", // Unread nodes and subtitles
           darkgray: "#cdd6f4", // Text
@@ -67,8 +68,13 @@ const config: QuartzConfig = {
       Plugin.TableOfContents(),
       Plugin.CrawlLinks({ markdownLinkResolution: "shortest" }),
       Plugin.Description(),
-      Plugin.Remark42({ host: "https://be-far.com/comments", site_id: "remark", theme: "dark", no_footer: true }),
-      Plugin.Latex({renderEngine: "katex"})
+      Plugin.Remark42({
+        host: "https://be-far.com/comments",
+        site_id: "remark",
+        theme: "dark",
+        no_footer: true,
+      }),
+      Plugin.Latex({ renderEngine: "katex" }),
     ],
     filters: [Plugin.RemoveDrafts()],
     emitters: [

@@ -115,7 +115,7 @@ export default ((opts?: Partial<TagContentOptions>) => {
             {pages.length != 0 && (
               <p>
                 {i18n(cfg.locale).pages.tagContent.itemsUnderTag({
-                  count: pages.length
+                  count: pages.length,
                 })}
               </p>
             )}
