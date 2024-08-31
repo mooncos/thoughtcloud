@@ -80,6 +80,7 @@ const config: QuartzConfig = {
       Plugin.ContentIndex({
         enableSiteMap: true,
         enableRSS: true,
+        rssFullHtml: true,
         rssLimit: 50,
         feedDirectories: ["index", "Updates"], // For a feed for only pages in content/Folder/, add "Folder" to the array
       }),

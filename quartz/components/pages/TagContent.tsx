@@ -108,19 +108,20 @@ export default ((opts?: Partial<TagContentOptions>) => {
         allFiles: pages,
       }
 
-    return (
-      <div class={classes}>
-        <article>{content}</article>
-        <div class="page-listing">
-          {pages.length != 0 && (
-            <p>
-              {i18n(cfg.locale).pages.tagContent.itemsUnderTag({
-                count: pages.length
-              })}
-            </p>
-          )}
-          <div>
-            <PageList {...listProps} />
+      return (
+        <div class={classes}>
+          <article>{content}</article>
+          <div class="page-listing">
+            {pages.length != 0 && (
+              <p>
+                {i18n(cfg.locale).pages.tagContent.itemsUnderTag({
+                  count: pages.length
+                })}
+              </p>
+            )}
+            <div>
+              <PageList {...listProps} />
+            </div>
           </div>
         </div>
       )
