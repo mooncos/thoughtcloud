@@ -33,6 +33,7 @@ const config: QuartzConfig = {
           secondary: "#325738", // Links, title, and current node
           tertiary: "#0E8390", // Visited nodes
           highlight: "rgba(143, 159, 169, 0.15)",
+          textHighlight: "#fff23688",
         },
         darkMode: {
           light: "#131829",// Backg
@@ -43,6 +44,7 @@ const config: QuartzConfig = {
           secondary: "#a6e3a1", // Links, title, and current node
           tertiary: "#89dceb", // Visited nodes
           highlight: "rgba(143, 159, 169, 0.15)",
+          textHighlight: "#b3aa0288",
         },
       },
     },
