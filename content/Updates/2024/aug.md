@@ -21,6 +21,6 @@ In completely unrelated news, (*Tom Scott Voice*) I am in Australia (*end Tom Sc
 - Updated the index again.
 - **RSS feeds now display full rich content!** Any bugs, let me know.
 	- To fix their ordering, I also played around with date displays. If a file doesn't have the proper date frontmatter, it won't shoot to the front wildly anymore, haha.
-- **Site bug:** Sorry! The Graph View on the right sidebar for desktop readers has a bug if you swap from light to dark mode or vice versa without refreshing the page.
+- Fixed ~~**Site bug:** Sorry! The Graph View on the right sidebar for desktop readers has a bug if you swap from light to dark mode or vice versa without refreshing the page.~~
 ## Helpful Links
 [[todo-list|Site To-Do List]] | [[Garden/index|Home]]
