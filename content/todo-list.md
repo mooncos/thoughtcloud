@@ -24,4 +24,4 @@ The date on this page will not be accurate in order to avoid spamming RSS feeds.
     - [ ] https://www.404media.co/google-leak-reveals-thousands-of-privacy-incidents/ to my-cloud
 - [ ] FPV
 - [ ] **Keyboard writeup**
-- [ ] Moving to FIDO2 and password managers
+- [ ] **Moving to FIDO2 and password managers**

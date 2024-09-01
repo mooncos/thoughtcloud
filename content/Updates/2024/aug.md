@@ -1,13 +1,13 @@
 ---
 title: 08/24 - Summary of Changes
-draft: true
+draft: false
 tags:
   - "#update"
 date: 2024-08-31
 lastmod: 2024-08-31
 ---
 ## Housekeeping
-I've now been maintaining this garden for a year! My productivity on  it has not been what I've wanted it to be, but I can confidently say that working on this website does indeed help me with what I've outlined in [[Essays/why-i-garden|Why I Garden]]. 
+I've now been maintaining this garden for a year! My productivity on it has not been what I've wanted it to be, but I can confidently say that working on this website does indeed help me with what I've outlined in [[Essays/why-i-garden|Why I Garden]].
 
 In completely unrelated news, (*Tom Scott Voice*) I am in Australia (*end Tom Scott Voice*) until the end of 2024, again with a light schedule. Let's see how that pans out for this site and my open source contributions.
 ## Pages
