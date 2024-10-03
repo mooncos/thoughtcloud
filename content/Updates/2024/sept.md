@@ -8,7 +8,7 @@ lastmod: 2024-10-02
 ---
 ## Pages
 - New: [[Programs I Like/terminals|My Terminal Roundup]]
-- New: [[Misc/a-font|CG Times License Violation]
+- New: [[Misc/a-font|CG Times License Violation]]
 - New: [[Projects/keyboards|A Mechanical Keyboard Journey]]
 - Content update: [[Dict/shell|Dict/Terminal]]
 - Content update: [[Essays/on-linux|The Linux Experience]]
