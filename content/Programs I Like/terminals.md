@@ -32,5 +32,7 @@ Since I removed window decorations for a better looking editor, I pre-set the wi
 
 The *one* downside is that there are no ligatures, nor will there ever be. It's a little sad when I use Haskell or Gleam, but it just means I need to be on the lookout for a new terminal...the brainrot is never-ending.
 - Kitty has ligatures, but has actually-broken italic rendering and the maintainer's replies to requests to fix that issue were very offputting. So not only would it be even more unusable in a similar "wontfix" way, I'm also not inclined to support that project.
+## Future
+I asked around, and I've been [enthusiastically recommended](https://social.treehouse.systems/@be_far/113184285138213653) to try WezTerm for my use case.
 ## Further Reading
 For the Windows curious, Windows Terminal is the "everything program" that I started on and which gave me the desire to find replacements on Linux. A while ago, I dug up and archived [[Projects/windows-archive#How I Did PowerShell|my customization recommendations for Windows Terminal]].
