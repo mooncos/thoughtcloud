@@ -19,9 +19,13 @@ One point: I've refuted the technical underpinnings of one of the biggest purpor
 ### What these incentives teach us
 At the end of the day, these policy arguments are here to suggest what direction the law should move in. To solve the economic "half" of the AI problem, what about a different kind of commercial right? Something more trademark than copyright. ==use of expression; remedies too==
 ## The enforcement problem
-WIP
+There are many roadblocks to bringing an action in infringement against either a user or an AI proprietor. Do the general policy points behind these roadblocks still hold in an AI context?
 ## Building universal truth
-WIP
+What makes truth as stated by humans different from fact-shaped output by AI?
+
+Statistically, what level of confidence will we accept as truth, and can AI get there?
+
+I really want to engage with other thinkers about authoritative information on this point. Molly White, if you're out there: how does it feel to be a significant contributor to what may become the last authoritative factual source on the internet?
 ## Ethics
 Why is piracy ethical, but not AI training?
 WIP

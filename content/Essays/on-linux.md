@@ -7,7 +7,7 @@ tags:
   - seedling
   - essay
 date: 2023-08-23
-lastmod: 2024-08-31
+lastmod: 2024-09-01
 ---
 > [!hint]  This page documents my many adventures with Linux and why I enjoy it.
 > If you're looking to get involved with Linux, feel free to browse the [[Resources/learning-linux|resources for that purpose]] that I've compiled.
@@ -69,7 +69,8 @@ Once I started encountering dependency hell on Fedora, I backed up my files and 
 
 I started on Plasma Wayland again. Here's the timeline:
 1. Plasma Wayland has some odd quirks, so I research workarounds to make it behave more like GNOME.
-2. Wayland has massive performance issues which I was unable to solve, so **Wayland is not yet usable for NVIDIA** { *last attempt at NVIDIA Wayland: August 2024* }. I swap to X11.
+2. Wayland has massive performance issues which I was unable to solve, so **Wayland is not yet usable for NVIDIA** { *last attempt at NVIDIA Wayland: September 2024, and we're close!* }. I swap to X11.
+	- Info at [[Projects/nvidia-linux#Wayland|NVIDIA On Linux#Wayland]].
 3. X11 Plasma reveals some more usability issues with Plasma. It has a massively degraded experience when I'm using my laptop undocked for notes etc. I start using Wayland on the go and X11 at my desktop.
 4. Swapping between X11 and Wayland on logout has instability issues, probably due to something in SDDM (because I'm still using Plasma). I realize that I'm only having to deal with these issues because I'm holding on to plasma.
 5. I revert to X11 GNOME. All is right with the world, I only need the workarounds that make my eGPU work, and it's more familiar because I've already used it for almost a year.

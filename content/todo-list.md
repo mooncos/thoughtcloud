@@ -15,7 +15,8 @@ The date on this page will not be accurate in order to avoid spamming RSS feeds.
 
 - High Priority
     - [ ] **ai-infringement**
-    - [ ] Ranting about ethics and AI research in a misc diatribe 
+    - [ ] Personhood: I Am Not A Robot (personhood credentials)
+    - [ ] wget-pipe-tar-xzvf (internet archive)
 - [ ] how to ruin a brand (google, SO, more generally Youtube)
 - [ ] *Fn Lock*
 - [ ] **Everything you need to know to swap to Linux**
@@ -25,3 +26,4 @@ The date on this page will not be accurate in order to avoid spamming RSS feeds.
 - [ ] FPV
 - [ ] **Keyboard writeup**
 - [ ] **Moving to FIDO2 and password managers**
+- [ ] In the interest of transparency and reducing barriers, put together and periodically update an entry with the tips in the legal profession that are typically institutional knowledge. Learning in Public: A Window into Private Law

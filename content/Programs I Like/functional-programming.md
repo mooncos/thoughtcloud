@@ -7,6 +7,7 @@ tags:
   - haskell
 date: 2024-01-04
 draft: false
+lastmod: 2024-01-04
 ---
 Functional programming is my favorite paradigm. 'Nuff said.
 

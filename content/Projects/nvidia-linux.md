@@ -5,7 +5,7 @@ tags:
   - difficulty-easy
   - foss
 date: 2024-03-26
-lastmod: 2024-05-19
+lastmod: 2024-09-01
 draft: false
 ---
 The year is 2024. NVIDIA on linux is in a usable state! Of course, there are still many pitfalls and options required for a good experience. This page documents every configuration trick I've used and has all the resources that you need to use it yourself.
@@ -25,6 +25,7 @@ Start by installing the nvidia driver that your distro bundles (or a community p
 **If your workflow requires the NVENC codec**: opt for the package containing all proprietary blobs rather than the package with the open source kernel driver.
 
 I recommend adding `nvidia.NVreg_OpenRmEnableUnsupportedGpus=1 nvidia.NVreg_PreserveVideoMemoryAllocations=1 nvidia_drm.modeset=1` to your kernel parameters. These help with hardware detection, sleep, and display configuration, respectively.
+- If you do add the third option, you will only be able to set the first two by kernel parameters. This is because **for modesetting drivers, options set in modprobe .conf files have no effect.**
 
 You should also blacklist the Noveau video driver. You can do this with kernel parameters through `modprobe.blacklist=noveau` (effective immediately), or in your module config files (effective after rebuilding the initramfs).
 ## X11
@@ -52,9 +53,13 @@ EndSection
 
 The options for the nvidia driver are documented [here](https://download.nvidia.com/XFree86/Linux-x86_64/396.51/README/xconfigoptions.html).
 ## Wayland
+> [!info] Full disclosure
+> Wayland is not yet usable on NVIDIA in my opinion, but it's so close now!
+
 On both Gnome and Plasma, I've managed to get the display working on 6.x kernels and 5xx drivers as long as I've enabled `all-ways-egpu` and kernel modesetting. 
 
 For more stable logins, ensure that your display manager (GDM for gnome, defaults to SDDM on Plasma) is using Wayland.
+
 ```
 # In /etc/gdm/custom.conf
 [daemon]
@@ -71,6 +76,9 @@ DisplayServer=wayland
 ```
 
 XWayland will have degraded performance on NVIDIA cards. On Arch specifically, some people have found success mitigating this with [wayland-protocols](https://archlinux.org/packages/extra/any/wayland-protocols/), { *merged -ed.* } ~~mutter-vrr on GNOME~~, and [xorg-xwayland-git](https://aur.archlinux.org/packages/xorg-xwayland-git). That combination didn't work for me when I tried it in April 2024, and with a few other wayland issues compounding the poor performance, I swapped back to X11. I do periodically check on Wayland though, so expect updates.
+
+August 2024 did not yield any new results. However, **September 2024**: Explicit sync is supported across Wayland, XWayland, Mutter, KWin, AND the graphics card drivers. The performance problems with NVIDIA are mostly gone. I was able to run games at X11 fidelity with maybe 10 less FPS, and it's no longer choppy or flickery. Input latency is the final issue, and I experienced it even while using LatencyFleX. I'm hopeful that once Mutter gets fullscreen tearing support in Wayland, I can finally make the switch. I haven't tested in Plasma again, but it's definitely possible that Plasma is now usable as a Wayland gaming DE.
+
 ## More Resources
 Allow me to dump every other page that I've needed to comb through for a working nvidia card.
 - [Archwiki - NVIDIA](https://wiki.archlinux.org/title/NVIDIA) (useful on more distros than Arch!)

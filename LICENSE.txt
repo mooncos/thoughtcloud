@@ -1,8 +1,8 @@
 ** CONTENT **
 
-Copyright (c) 2024 bfahrenfort.
+Copyright (c) 2024 bfahrenfort. All rights reserved.
 
-Written content (under the content/ folder) is my sole intellectual property and unauthorized reproduction/use is prohibited. I specifically authorize citing my work in your own with a deep link to the page, and the limited reproduction necessary to effectuate the non-reproduction/primary purpose of your work.
+Written content (under the content/ folder): All rights reserved. I authorize deep links to webpages containing the content herein for citation/attribution purposes, and I authorize the limited reproduction necessary to effectuate the primary purpose of your work.
 
 ** CODE **
 
