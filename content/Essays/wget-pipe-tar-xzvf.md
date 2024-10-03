@@ -7,7 +7,7 @@ tags:
   - seedling
 date: 2024-09-05
 lastmod: 2024-09-05
-draft: false
+draft: true
 ---
 > [!info] Bottom line up front:
 > The Internet Archive has lost. Its model of "controlled digital lending" is not considered fair use by appellate courts. This is the worst outcome that the case could have had.
