@@ -10,7 +10,7 @@ lastmod: 2024-10-13
 draft: false
 ---
 Writing: it's ~~quick~~, it's ~~easy~~, and it's free\*.
-- \\* terms and conditions apply
+- \* terms and conditions apply
 
 It's often said about AI content that you shouldn't be bothered to read what nobody could be bothered to write. But the reverse is true, and I have a deep respect for anyone that does take the time and conscious effort to express themselves in long- or medium-form.
 

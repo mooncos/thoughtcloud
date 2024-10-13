@@ -13,6 +13,7 @@ As of posting this, I've been on the fediverse/socialweb for a year. The amount 
 ## Pages
 - New: [[Misc/ai-integrity|Academic Integrity and AI]]. A nice little preview before I drop the infringement page...
 - New: [[Essays/write-something|You should write something!]]
+- Content Update: [[Projects/nvidia-linux|Nvidia on Linux]]
 ## Status Updates
 - 
 ## Helpful Links
