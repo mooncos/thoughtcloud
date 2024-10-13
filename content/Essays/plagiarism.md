@@ -17,7 +17,7 @@ Some arguments in this paper specifically surrounding AI are related more to leg
 > [!warning]
 > CW: discussions of systemic/societal implicit bias and inequity in the AI section. Emotional accounts of exploited work product elsewhere.
 ## My Position
-I think all works published that hold themselves out as informative or authoritative should properly inform the reader what they used to draw their conclusions.
+I think all works published that hold themselves out as informative or authoritative should properly inform the reader what they used to draw their conclusions. Writing to inform comes with a certain respect for the reader, and should be done with the assumption that the reader will critically engage with your points and want to explore the backdrop on which your points are made.
 
 To comport with my own beliefs, on this website, I:
 - Provide links to webpages for programs/projects I discuss, including documentation as needed.
@@ -38,6 +38,7 @@ There are two institutions in my life that have most certainly contributed to my
 Coming from academia, my culture is very much "show your work." It was always beneficial to me personally to be able to point to someone much more decorated than myself and go "see? They share my conclusion." I'm not commenting on whether the academy's meritocracy is a good system (as I'm very much not qualified to do so), but following the rules of the institution and citing my sources allowed me to reach a broader audience without much effort on my part beyond what was necessary to create work product.
 
 The legal field is even more source-mandatory due to the system of precedent, that judges *must* follow the rules set by prior decisions binding on their court. The onus is almost entirely on the advocates to inform the judge what they must do (while arguing what they *should* do). The profession places very little value on original statements as a result. The expression inherent in how you arrange the statements of others, combined with your ability to find favorable statements, is what determines your skill level as an attorney.
+- Non-plagiarism sidebar: an exercise for the reader that I like to throw at poor unsuspecting 1Ls is, **should legal briefs be copyrightable**? That is, if you file a brief and some attorney at another firm downloads the brief from the public record and changes names/signatures before filing it in their case, have they committed copyright infringement?
 
 As mentioned above, there's definitely a gap in my knowlege/views that broadens the more creative or traditionally-considered-artistic the subject matter gets. Copyright absolutely extends to the arts, but what place does attribution have when the purpose is to entertain? One can hardly document one's creative experience when working on a novel, a script, a painting, in the same way a legal brief can be. I do believe in the necessity of personal attribution for those who directly contributed to an artistic work (think the credits section of a movie) for professional reasons, but beyond that, I'm uncertain.
 ## Digital Gardening and Plagiarism
