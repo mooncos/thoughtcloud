@@ -1,29 +1,45 @@
 name: Deploy Quartz site to GitHub Pages
- 
+
 on:
   push:
-    branches:
-      - v4
- 
+  repository_dispatch:
+    types: [build]
+  workflow_dispatch:
+  workflow_run:
+    workflows:
+      - build
+      - deploy
+    branches: [v4]
+
 permissions:
   contents: read
   pages: write
   id-token: write
- 
+
 concurrency:
   group: "pages"
   cancel-in-progress: false
- 
+
 jobs:
   build:
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v4
         with:
+          token: ${{ secrets.gh_action_token_PAT }}
           fetch-depth: 0 # Fetch all history for git info
+          submodules: 'recursive'
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+      - name: Fetch submodules
+        continue-on-error: true
+        run: |
+          git submodule update --init --recursive --checkout -f --remote -- "content"
+          git config --global user.name "GitHub Action"
+          git config --global user.email "noreply@github.com"
+          git commit -am "chore (update): fetch submodule"
+          git push
       - name: Install Dependencies
         run: npm ci
       - name: Build Quartz
@@ -32,7 +48,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: public
- 
+
   deploy:
     needs: build
     environment:
