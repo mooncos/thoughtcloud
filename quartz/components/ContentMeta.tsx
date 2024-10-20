@@ -27,11 +27,25 @@ export default ((opts?: Partial<ContentMetaOptions>) => {
     const text = fileData.text
 
     if (text) {
-      const segments: (string | JSX.Element)[] = []
+      var modifiedSegment: string = ""
+      var createdSegment: string = ""
+      const fileRelativePath = fileData.filePath
+      //const segments: (string | JSX.Element)[] = []
 
       if (fileData.dates) {
-        segments.push(formatDate(getDate(cfg, fileData)!, cfg.locale))
+        const cfgDefaultDataType = cfg.defaultDateType // For backward compatibility, just in case this is used somewhere else by the original author
+        //segments.push(formatDate(getDate(cfg, fileData)!, cfg.locale))
       }
+      if (fileData.dates.created) {
+          cfg.defaultDateType = "created"
+          createdSegment = formatDate(getDate(cfg, fileData)!)
+        }
+      if (fileData.dates.modified) {
+          cfg.defaultDateType = "modified"
+          modifiedSegment = formatDate(getDate(cfg, fileData)!)
+        }
+        cfg.defaultDateType = cfgDefaultDataType
+    
 
       // Display reading time if enabled
       if (options.showReadingTime) {
