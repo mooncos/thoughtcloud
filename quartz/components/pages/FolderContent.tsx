@@ -68,7 +68,6 @@ export default ((opts?: Partial<FolderContentOptions>) => {
           frontmatter: { title: subfolderTitle, tags: ["folder"] },
         })
       }
-
     })
 
     const cssClasses: string[] = fileData.frontmatter?.cssclasses ?? []
