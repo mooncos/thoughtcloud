@@ -205,33 +205,36 @@
   .explorer {
     @media all and ($mobile) {
       #explorer-content {
+        box-sizing: border-box;
         overscroll-behavior: none;
         z-index: 100;
         position: absolute;
         background-color: var(--light);
-        max-width: calc(100% - 4rem);
-        left: 0;
-        width: 100%;
+        max-width: 100dvw;
+        left: -100dvw;
+        width: 100dvw;
         transition: all 300ms ease-in-out;
         overflow: hidden;
         padding: 2rem 2rem 4rem;
-        height: 100%;
-        max-height: calc(100dvh - 8rem);
+        height: calc(100dvh - 4rem);
+        max-height: calc(100dvh - 4rem);
         margin-top: 2rem;
         visibility: visible;
 
         &:not(.collapsed) {
-          height: calc(100dvh - 8rem);
+          //height: 100dvh;
+          left: 0;
         }
 
         ul.overflow {
-          max-height: calc(100dvh - 8rem);
+          max-height: 100%;
           width: 100%;
         }
 
         &.collapsed {
-          height: 0;
-          visibility: hidden;
+          //height: 0;
+          left: -100dvw;
+          visibility: visible;
         }
       }
 
