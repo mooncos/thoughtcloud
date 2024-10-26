@@ -40,18 +40,7 @@ function toggleExplorer(this: HTMLElement) {
   if (document.querySelector("#mobile-explorer")) {
     // Disable scrolling one the page when the explorer is opened on mobile
     const bodySelector = document.querySelector("#quartz-body")
-    if (bodySelector) {
-      if (!bodySelector.classList.contains("lock-scroll")) {
-        bodySelector.setAttribute("scroll-position", `${window.scrollY}`)
-        bodySelector.classList.toggle("lock-scroll")
-      } else {
-        bodySelector.classList.toggle("lock-scroll")
-        window.scrollTo({
-          top: Number(bodySelector.getAttribute("scroll-position")),
-          behavior: "instant",
-        })
-      }
-    }
+    if (bodySelector) bodySelector.classList.toggle("lock-scroll")
   }
 }
 
@@ -194,6 +183,10 @@ document.addEventListener("nav", () => {
   if (lastItem) {
     observer.observe(lastItem)
   }
+
+  // Hide explorer on mobile until it is requested
+  const hiddenUntilDoneLoading = document.querySelector("#mobile-explorer")
+  hiddenUntilDoneLoading?.classList.remove("hide-until-loaded")
 
   toggleExplorerFolders()
 })

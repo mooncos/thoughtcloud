@@ -88,7 +88,7 @@ export default ((userOpts?: Partial<Options>) => {
         <button
           type="button"
           id="mobile-explorer"
-          class="collapsed"
+          class="collapsed hide-until-loaded"
           data-behavior={opts.folderClickBehavior}
           data-collapsed={opts.folderDefaultState}
           data-savestate={opts.useSavedState}
