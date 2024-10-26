@@ -81,8 +81,6 @@ export default (() => {
     const titleSuffix = cfg.pageTitleSuffix ?? ""
     const title =
       (fileData.frontmatter?.title ?? i18n(cfg.locale).propertyDefaults.title) + titleSuffix
-    const description =
-      fileData.description?.trim() ?? i18n(cfg.locale).propertyDefaults.description
     let description = ""
     if (fdDescription) {
       description = unescapeHTML(fdDescription)
