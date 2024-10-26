@@ -51,7 +51,12 @@ export default (() => {
   let fontsPromise: Promise<SatoriOptions["fonts"]>
 
   let fullOptions: SocialImageOptions
-  const Head: QuartzComponent = ({ cfg, fileData, externalResources, ctx }: QuartzComponentProps) => {
+  const Head: QuartzComponent = ({
+    cfg,
+    fileData,
+    externalResources,
+    ctx,
+  }: QuartzComponentProps) => {
     // Initialize options if not set
     if (!fullOptions) {
       if (typeof cfg.generateSocialImages !== "boolean") {
