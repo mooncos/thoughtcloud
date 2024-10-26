@@ -26,7 +26,7 @@ For example, here's what the default configuration looks like if you set `genera
 generateSocialImages: {
   colorScheme: "lightMode", // what colors to use for generating image, same as theme colors from config, valid values are "darkMode" and "lightMode"
   width: 1200, // width to generate with (in pixels)
-  height: 676, // height to generate with (in pixels)
+  height: 630, // height to generate with (in pixels)
   imageStructure: defaultImage // import from `socialImage.tsx`, recommended to add your own one there as well
 }
 ```
