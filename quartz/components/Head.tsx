@@ -43,7 +43,7 @@ const extension = "webp"
 const defaultOptions: SocialImageOptions = {
   colorScheme: "lightMode",
   width: 1200,
-  height: 676,
+  height: 630,
   imageStructure: defaultImage,
 }
 
