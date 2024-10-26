@@ -51,7 +51,7 @@ export default (() => {
   let fontsPromise: Promise<SatoriOptions["fonts"]>
 
   let fullOptions: SocialImageOptions
-  function Head({ cfg, fileData, externalResources, ctx }: QuartzComponentProps) {
+  const Head: QuartzComponent = ({ cfg, fileData, externalResources, ctx }: QuartzComponentProps) => {
     // Initialize options if not set
     if (!fullOptions) {
       if (typeof cfg.generateSocialImages !== "boolean") {
@@ -74,6 +74,11 @@ export default (() => {
 
     // Get file description (priority: frontmatter > fileData > default)
     const fdDescription =
+      fileData.description?.trim() ?? i18n(cfg.locale).propertyDefaults.description
+    const titleSuffix = cfg.pageTitleSuffix ?? ""
+    const title =
+      (fileData.frontmatter?.title ?? i18n(cfg.locale).propertyDefaults.title) + titleSuffix
+    const description =
       fileData.description?.trim() ?? i18n(cfg.locale).propertyDefaults.description
     let description = ""
     if (fdDescription) {
