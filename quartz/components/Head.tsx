@@ -74,8 +74,6 @@ export default (() => {
     const slug = fileData.filePath
     // since "/" is not a valid character in file names, replace with "-"
     const fileName = slug?.replaceAll("/", "-")
-    const title =
-      fileData.frontmatter?.title ?? i18n(cfg.locale).propertyDefaults.title ?? "Untitled"
 
     // Get file description (priority: frontmatter > fileData > default)
     const fdDescription =
