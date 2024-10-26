@@ -1,13 +1,22 @@
 @use "../../styles/variables.scss" as *;
 
+// Sticky top bar (stays in place when scrolling down on mobile.
+@media all and ($mobile) {
+  .page > #quartz-body .sidebar.left:has(.explorer) {
+    box-sizing: border-box;
+    position: sticky;
+    background-color: var(--light);
+  }
+}
+
 .explorer {
+  display: flex;
+
   @media all and ($mobile) {
     order: -1;
     height: initial;
     overflow: hidden;
   }
-
-  display: flex;
 
   button#mobile-explorer {
     display: none;
@@ -220,7 +229,8 @@ li:has(> .folder-outer:not(.open)) > .folder-container > svg {
       position: absolute;
       background-color: var(--light);
       max-width: 100dvw;
-      left: -100dvw;
+      //left: -100dvw;
+      transform: translateX(-100dvw);
       width: 100%;
       transition: all 300ms ease-in-out;
       overflow: hidden;
@@ -231,7 +241,7 @@ li:has(> .folder-outer:not(.open)) > .folder-container > svg {
       visibility: visible;
 
       &:not(.collapsed) {
-        left: 0;
+        transform: translateX(0);
       }
 
       ul.overflow {
@@ -240,7 +250,7 @@ li:has(> .folder-outer:not(.open)) > .folder-container > svg {
       }
 
       &.collapsed {
-        left: -100dvw;
+        transform: translateX(-100dvw);
         visibility: visible;
       }
     }
@@ -282,17 +292,5 @@ html:has(.no-scroll) {
 
   html:has(.no-scroll) {
     overflow: auto !important;
-  }
-}
-
-// Lock page scroll on mobile
-.lock-scroll {
-  position: static;
-}
-
-@media all and ($mobile) {
-  .lock-scroll {
-    position: fixed;
-    width: calc(100% - 2rem);
   }
 }
