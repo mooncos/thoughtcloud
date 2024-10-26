@@ -2,25 +2,25 @@
 
 @media all and ($mobile) {
   .page > #quartz-body {
-    // Move page on mobile
+    // Shift page position when toggling Explorer on mobile.
     & > :not(.sidebar.left:has(.explorer)) {
       transform: translateX(0);
       transition: transform 300ms ease-in-out;
     }
     &.lock-scroll > :not(.sidebar.left:has(.explorer)) {
       transform: translateX(100dvw);
-      //width: 100%;
       transition: transform 300ms ease-in-out;
     }
 
-    // Sticky top bar (stays in place when scrolling down on mobile.
+    // Sticky top bar (stays in place when scrolling down on mobile).
     .sidebar.left:has(.explorer) {
       box-sizing: border-box;
       position: sticky;
       background-color: var(--light);
     }
 
-    // Hide until done loading
+    // Hide Explorer on mobile until done loading.
+    // Prevents ugly animation on page load.
     .hide-until-loaded ~ #explorer-content {
       display: none;
     }
@@ -65,17 +65,17 @@
   }
 
   /*&:after {
-  pointer-events: none;
-  content: "";
-  width: 100%;
-  height: 50px;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  opacity: 1;
-  transition: opacity 0.3s ease;
-  background: linear-gradient(transparent 0px, var(--light));
-}*/
+    pointer-events: none;
+    content: "";
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    background: linear-gradient(transparent 0px, var(--light));
+  }*/
 }
 
 button#mobile-explorer,
@@ -248,7 +248,6 @@ li:has(> .folder-outer:not(.open)) > .folder-container > svg {
       background-color: var(--light);
       max-width: 100dvw;
       left: -100dvw;
-      //transform: translateX(0);
       width: 100%;
       transition: transform 300ms ease-in-out;
       overflow: hidden;
