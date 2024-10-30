@@ -32,7 +32,6 @@ export function pageResources(
     css: [
       {
         content: joinSegments(baseDir, "index.css"),
-        inline: false,
       },
       ...staticResources.css,
     ],
