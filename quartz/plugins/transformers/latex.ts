@@ -34,7 +34,6 @@ export const Latex: QuartzTransformerPlugin<Partial<Options>> = (opts) => {
             {
               // base css
               content: "https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css",
-              inline: false,
             },
           ],
           js: [

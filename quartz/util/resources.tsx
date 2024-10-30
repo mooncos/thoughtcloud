@@ -18,7 +18,7 @@ export type JSResource = {
 
 export type CSSResource = {
   content: string
-  inline: boolean
+  inline?: boolean
   spaPreserve?: boolean
 }
 
@@ -44,7 +44,7 @@ export function JSResourceToScriptElement(resource: JSResource, preserve?: boole
 
 export function CSSResourceToStyleElement(resource: CSSResource, preserve?: boolean): JSX.Element {
   const spaPreserve = preserve ?? resource.spaPreserve
-  if (resource.inline) {
+  if (resource.inline ?? false) {
     return <style>{resource.content}</style>
   } else {
     return (
