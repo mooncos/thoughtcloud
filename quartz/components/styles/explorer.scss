@@ -34,6 +34,8 @@
     order: -1;
     height: initial;
     overflow: hidden;
+    flex-shrink: 0;
+    align-self: flex-start;
   }
 
   button#mobile-explorer {
@@ -245,16 +247,17 @@ li:has(> .folder-outer:not(.open)) > .folder-container > svg {
       overscroll-behavior: none;
       z-index: 100;
       position: absolute;
+      top: 0;
       background-color: var(--light);
       max-width: 100dvw;
       left: -100dvw;
       width: 100%;
       transition: transform 300ms ease-in-out;
       overflow: hidden;
-      padding: 2rem;
-      height: calc(100dvh - 4rem);
-      max-height: calc(100dvh - 4rem);
-      margin-top: 2rem;
+      padding: $topSpacing 2rem 2rem;
+      height: 100dvh;
+      max-height: 100dvh;
+      margin-top: 0;
       visibility: hidden;
 
       &:not(.collapsed) {
@@ -275,6 +278,7 @@ li:has(> .folder-outer:not(.open)) > .folder-container > svg {
 
     #mobile-explorer {
       margin: 5px;
+      z-index: 101;
 
       &:not(.collapsed) .lucide-menu {
         transform: rotate(-90deg);
