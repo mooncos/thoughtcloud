@@ -16,6 +16,10 @@
   font-display: swap;
 }
 
+//
+// Background/visual elements
+//
+
 // Pseudo-element for the transparent background cover moon
 [saved-theme="dark"] body::before {
   filter: invert(100%);
@@ -54,6 +58,10 @@ body[data-slug="index"] img {
 body[data-slug="index"] blockquote[class="callout"][data-callout="tip"] {
   width: 50%;
 }
+
+// 
+// Content spacing
+//
 
 h1 {
   padding-bottom: 2px;
@@ -115,4 +123,65 @@ footer > p {
 ul {
   margin-top: 2px;
   padding-top: 0px;
+}
+
+//
+// Component aesthetics
+//
+
+.page-footer {
+  display: grid;
+  grid-auto-columns: 1fr;
+  width: 100%;
+}
+
+.page-footer > * {
+  grid-row: 1;
+  padding: 0px 16px;
+}
+
+#quartz-body {
+  margin: 1rem 0rem;
+}
+
+.page > #quartz-body .sidebar {
+  margin: 0px 32px 0px 1rem;
+  padding: 16px 16px 2px 16px;
+}
+
+.page > #quartz-body .sidebar.left {
+  border-radius: 1rem;
+  border: 2px solid var(--darkgray);
+  top: 1rem;
+  height: calc(100vh - 2rem);
+  margin-bottom: 1rem;
+  align-content: flex-start;
+  box-shadow: 8px 6px 0 0 var(--gray);
+  transition: all .3s ease-in;
+}
+[saved-theme="dark"] .page > #quartz-body .sidebar.left:hover {
+  border: 2px solid #e9edfa;
+  box-shadow: 8px 6px 0 0 #e9edfa;
+}
+.page > #quartz-body .sidebar.left:hover {
+  border: 2px solid #262835;
+  box-shadow: 8px 6px 0 0 #262835;
+  // top: calc(1rem - 4px);
+  // margin-left: calc(1rem - 2px);
+  // margin-right: 34px;
+  // height: calc(100vh - (2rem + 2px))
+}
+
+
+.page > #quartz-body .page-header {
+  margin-top: 1px;
+  padding: 0px;
+}
+
+#toc-content .depth-1 {
+  margin-bottom: 0px;
+}
+
+#toc-content ul {
+  margin: 0px 0px;
 }
