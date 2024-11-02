@@ -15,7 +15,7 @@ date: 2023-08-23
 On my little corner of the internet, I document my adventures in tech and complain about the internet of shit. This is **Projects & Privacy**.
 
 # Welcome!
-You're on a [[Dict/what-is-a-garden|Digital Garden]] dedicated to open-source use and contribution, legal issues in tech, and more.
+You're on a [[Atomic/what-is-a-garden|Digital Garden]] dedicated to open-source use and contribution, legal issues in tech, and more.
 
 For a monthly list of what's new on the site, subscribe to the [Updates RSS feed](/Updates.xml).
 ## Important Links

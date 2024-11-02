@@ -1,5 +1,5 @@
 ---
-title: "Generative AI: Bad Faith Copyright Infringement"
+title: "[ARCHIVED] Generative AI: Bad Faith Copyright Infringement"
 tags:
   - essay
   - ai

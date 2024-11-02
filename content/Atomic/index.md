@@ -1,5 +1,5 @@
 ---
-title: Dict
+title: Atomic
 tags:
   - toc
   - glossary

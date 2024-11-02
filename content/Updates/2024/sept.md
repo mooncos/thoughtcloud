@@ -10,7 +10,7 @@ lastmod: 2024-10-02
 - New: [[Programs I Like/terminals|My Terminal Roundup]]
 - New: [[Misc/a-font|CG Times License Violation]]
 - New: [[Projects/keyboards|A Mechanical Keyboard Journey]]
-- Content update: [[Dict/shell|Dict/Terminal]]
+- Content update: [[Atomic/shell|Dict/Terminal]]
 - Content update: [[Essays/on-linux|The Linux Experience]]
 - Content update: [[Programs I Like/code-editors|Code Editors]]
 - Content update (**exciting**!): [[Projects/nvidia-linux|NVIDIA on Linux]]

@@ -52,7 +52,7 @@ Upgrades are inevitable with any piece of hardware. Now that my GPU is up to a 3
 ## Software
 Any specific software that I like using can be found in [[Programs I Like/home|Programs I Like]]. Here, I'll just go over some tenets I've noticed when dealing with my computer as a tool for my work, my projects, and my personal life.
 
-I value low-[[Dict/resistance|resistance]], low-[[Dict/friction|friction]] software. It's what led me to pursue linux, Obsidian, and this website in general. If something is fast to use, I'll use it more often.
+I value low-[[Atomic/resistance|resistance]], low-[[Atomic/friction|friction]] software. It's what led me to pursue linux, Obsidian, and this website in general. If something is fast to use, I'll use it more often.
 #### Immutable Distros
 Something that's gaining popularity is the immutable operating system, where the underlying filesystem is intentionally resistant to change. I don't see this as overly resistant in my sense, mainly because providers like VanillaOS and Fedora Silverblue recognize that this resistance is present and provide alternative routes to install software. It's more of a compromise.
 

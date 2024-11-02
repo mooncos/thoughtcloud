@@ -12,6 +12,9 @@ One of the core philosophies of digital gardening is that one should document th
 - [YouTube: Tech for Tea - The Mess that is Application Theming](https://youtube.com/watch?v=HqlwUjogMSM)
 - [Nyxt Browser](https://nyxt.atlas.engineer/)
 - [The Heat Death of the Internet](https://www.takahe.org.nz/heat-death-of-the-internet/)
+- [Pivot to AI - Strawberry and chain-of-thought](https://pivot-to-ai.com/2024/09/13/strawberry-fields-forever-openais-new-o1-model/)
+	- [Strawberry Contd](https://pivot-to-ai.com/2024/09/17/openai-does-not-want-you-delving-into-o1-strawberrys-alleged-chain-of-thought/)
+- [The AI Copyright Hype: Legal Claims that Didn't Hold Up](https://www.techdirt.com/2024/09/05/the-ai-copyright-hype-legal-claims-that-didnt-hold-up/)
 
 ## Historical
 - [Nix Flakes: An Introduction](https://xeiaso.net/blog/nix-flakes-1-2022-02-21/)

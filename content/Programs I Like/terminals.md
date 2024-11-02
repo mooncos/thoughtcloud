@@ -12,7 +12,7 @@ I...have a problem.
 
 ![[Attachments/terminal-illnesses.png|A folder of applications on my computer containing nine different terminal and shell programs.]]
 
-Because of my desire for [[Dict/friction|low-friction]] software, I'm always looking for a terminal that I can pop in and out of for its specific purpose. All of the above are worth touching on when I get time, but two have emerged as perfect for my use case.
+Because of my desire for [[Atomic/friction|low-friction]] software, I'm always looking for a terminal that I can pop in and out of for its specific purpose. All of the above are worth touching on when I get time, but two have emerged as perfect for my use case.
 ## Run-And-Done: ddterm
 [ddterm](https://extensions.gnome.org/extension/3780/ddterm/) is a GNOME shell extension for a "Quake-style terminal." This means that when you press a keybind, the already-in-the-background terminal drops down from the top of the screen above all other windows, ready to go to work. It mimics the behavior of the in-game console of the video game Quake, which is where it gets its name. You've seen similar behavior if you've ever pressed the grave (\`) key in Counter-Strike or Team Fortress 2. My keybind is Alt+grave—although the common one is F12—and pressing it pops up:
 
