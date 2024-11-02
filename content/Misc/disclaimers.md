@@ -14,7 +14,9 @@ It goes without saying that anything herein constitutes my own opinion and not t
 ## Attribution
 Feel free to properly reference any of the content within in your own gardens or work. Don’t plagiarize. A link to the page you used is just fine.
 
-**Do not input my work into an online or offline generative AI for any purpose, including to train or update the model, explore alternate positions to mine, or to converse with the work.** Keep the moles out of the garden. 
+**Do not input my work into an online or offline generative AI for any purpose, including to train or update the model, explore alternate positions to mine, or to converse with the work.**
+- If you need an alternative explanation to understand my argument, please ask me! I run this site to practice explaining these topics. 
+- If you @ me with "I asked chatgpt the same question and here's what it said", it's going to say more about your ability to effectively converse on these subjects than it will about the merits of the AI's position.
 ## Privacy/Terms of Use
 - I don't run analytics of any kind on this site.
 - I don't share any of my content with third parties, nor do I consent to third party use of my content which I retain a copyright in.

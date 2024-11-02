@@ -6,7 +6,7 @@ tags:
   - programming
   - difficulty-easy
   - seedling
-draft: true
+draft: false
 date: 2024-07-25
 lastmod: 2024-09-05
 ---

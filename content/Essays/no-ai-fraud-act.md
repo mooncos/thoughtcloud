@@ -92,7 +92,7 @@ Below is a statement from Scarlett Johansson:
 >
 > When I heard the released demo, I was shocked, angered and in disbelief that Mr. Altman would pursue a voice that sounded so eerily similar to mine that my closest friends and news outlets could not tell the difference. Mr. Altman even insinuated that the similarity was intentional, tweeting a single word "her" - a reference to the film in which I voiced a chat system, Samantha, who forms an intimate relationship with a human.
 >
-Two days before the ChatGPT 4.0 demo was released, Mr. Altman contacted my agent, asking me to reconsider. Before we could connect, the system was out there.
+> Two days before the ChatGPT 4.0 demo was released, Mr. Altman contacted my agent, asking me to reconsider. Before we could connect, the system was out there.
 >
 > As a result of their actions, I was forced to hire legal counsel, who wrote two letters to Mr. Altman and OpenAl, setting out what they had done and asking them to detail the exact process by which they created the "Sky" voice. Consequently, OpenAl reluctantly agreed to take down the "Sky" voice.
 >
