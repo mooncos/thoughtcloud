@@ -5,6 +5,7 @@ import script from "./scripts/comments.inline"
 
 type Options = {
   provider: "giscus"
+  respectFrontmatter?: boolean
   options: {
     repo: `${string}/${string}`
     repoId: string
@@ -25,7 +26,13 @@ function boolToStringBool(b: boolean): string {
 }
 
 export default ((opts: Options) => {
-  const Comments: QuartzComponent = ({ displayClass, cfg }: QuartzComponentProps) => {
+  const Comments: QuartzComponent = ({ displayClass, fileData, cfg }: QuartzComponentProps) => {
+    // check if comments should be displayed according to frontmatter
+    if ((opts.respectFrontmatter ?? false) && 
+        !(fileData.frontmatter?.comments ?? false)) {
+      return null
+    }
+
     return (
       <div
         class={classNames(displayClass, "giscus")}
@@ -46,7 +53,10 @@ export default ((opts: Options) => {
     )
   }
 
-  Comments.afterDOMLoaded = script
+  // make sure we actually need to load the script
+  if(Comments != null) {
+    Comments.afterDOMLoaded = script
+  }
 
   return Comments
 }) satisfies QuartzComponentConstructor<Options>
