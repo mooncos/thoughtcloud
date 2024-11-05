@@ -5,7 +5,6 @@ import script from "./scripts/comments.inline"
 
 type Options = {
   provider: "giscus"
-  respectFrontmatter?: boolean
   options: {
     repo: `${string}/${string}`
     repoId: string
@@ -30,7 +29,7 @@ export default ((opts: Options) => {
     // check if comments should be displayed according to frontmatter
     const commentsFlag: boolean =
       fileData.frontmatter?.comments === true || fileData.frontmatter?.comments === "true"
-    if ((opts.respectFrontmatter ?? false) && !commentsFlag) {
+    if (!commentsFlag) {
       return <></>
     }
 

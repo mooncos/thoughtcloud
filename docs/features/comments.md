@@ -57,7 +57,6 @@ Quartz also exposes a few of the other Giscus options as well and you can provid
 ```ts
 type Options = {
   provider: "giscus"
-  respectFrontmatter?: boolean
   options: {
     repo: `${string}/${string}`
     repoId: string
@@ -118,11 +117,11 @@ afterBody: [
 
 #### Conditionally display comments
 
-Quartz can conditionally display the comment box based on a field `comments` in the frontmatter. To enable this feature, set `respectFrontmatter` to `true` & adjust pages where comments should be enabled:
+Quartz can conditionally display the comment box based on a field `comments` in the frontmatter. By default, all pages will display comments, to disable it for a specific page, set `comments` to `false`.
 
 ```
 ---
-title: Comments enabled here!
-comments: true
+title: Comments disabled here!
+comments: false
 ---
 ```
