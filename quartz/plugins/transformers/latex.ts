@@ -1,10 +1,11 @@
 import remarkMath from "remark-math"
 import rehypeKatex from "rehype-katex"
 import rehypeMathjax from "rehype-mathjax/svg"
+import rehypeTypst from "@myriaddreamin/rehype-typst"
 import { QuartzTransformerPlugin } from "../types"
 
 interface Options {
-  renderEngine: "katex" | "mathjax"
+  renderEngine: "katex" | "mathjax" | "typst"
   customMacros: MacroType
 }
 
@@ -21,32 +22,45 @@ export const Latex: QuartzTransformerPlugin<Partial<Options>> = (opts) => {
       return [remarkMath]
     },
     htmlPlugins() {
-      if (engine === "katex") {
-        return [[rehypeKatex, { output: "html", macros }]]
-      } else {
-        return [[rehypeMathjax, { macros }]]
+      switch (engine) {
+        case "katex": {
+          return [[rehypeKatex, { output: "html", macros }]]
+        }
+        case "typst": {
+          return [[rehypeTypst]]
+        }
+        case "mathjax": {
+          return [[rehypeMathjax, { macros }]]
+        }
+        default: { 
+          return [[rehypeMathjax, { macros }]]
+        }
       }
     },
     externalResources() {
-      if (engine === "katex") {
-        return {
-          css: [
-            {
+      switch (engine) {
+        case "katex": {
+          return {
+            css: [
               // base css
-              content: "https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css",
-            },
-          ],
-          js: [
-            {
-              // fix copy behaviour: https://github.com/KaTeX/KaTeX/blob/main/contrib/copy-tex/README.md
-              src: "https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/copy-tex.min.js",
-              loadTime: "afterDOMReady",
-              contentType: "external",
-            },
-          ],
+              "https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css",
+            ],
+            js: [
+              {
+                // fix copy behaviour: https://github.com/KaTeX/KaTeX/blob/main/contrib/copy-tex/README.md
+                src: "https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/copy-tex.min.js",
+                loadTime: "afterDOMReady",
+                contentType: "external",
+              },
+            ],
+          }
         }
-      } else {
-        return {}
+        case "typst": {
+          return {}
+        }
+        default: {
+          return {}
+        }
       }
     },
   }
