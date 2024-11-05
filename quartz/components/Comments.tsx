@@ -31,7 +31,7 @@ export default ((opts: Options) => {
     const commentsFlag: boolean =
       fileData.frontmatter?.comments === true || fileData.frontmatter?.comments === "true"
     if ((opts.respectFrontmatter ?? false) && !commentsFlag) {
-      return null
+      return <></>
     }
 
     return (
@@ -54,10 +54,7 @@ export default ((opts: Options) => {
     )
   }
 
-  // make sure we actually need to load the script
-  if (Comments != null) {
-    Comments.afterDOMLoaded = script
-  }
+  Comments.afterDOMLoaded = script
 
   return Comments
 }) satisfies QuartzComponentConstructor<Options>
