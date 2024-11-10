@@ -65,6 +65,10 @@ export type SocialImageOptions = {
    */
   width: number
   /**
+   * Wether to use the auto generated image for the root path ("/", when set to false) or the default og image (when set to true).
+   */
+  excludeRoot: boolean
+  /**
    * JSX to use for generating image. See satori docs for more info (https://github.com/vercel/satori)
    * @param cfg global quartz config
    * @param userOpts options that can be set by user

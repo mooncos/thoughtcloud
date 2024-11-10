@@ -45,6 +45,7 @@ const defaultOptions: SocialImageOptions = {
   width: 1200,
   height: 630,
   imageStructure: defaultImage,
+  excludeRoot: false,
 }
 
 export default (() => {
@@ -145,6 +146,13 @@ export default (() => {
       fileData.frontmatter?.socialImage ??
       fileData.frontmatter?.image ??
       fileData.frontmatter?.cover
+
+    // Override with default og image if config option is set
+    if (fileData.slug === "index") {
+      ogImagePath = ogImageDefaultPath
+    }
+
+    // Override with frontmatter url if existing
     if (frontmatterImgUrl) {
       ogImagePath = `https://${cfg.baseUrl}/static/${frontmatterImgUrl}`
     }
