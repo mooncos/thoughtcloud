@@ -31,24 +31,30 @@ export async function getSatoriFont(headerFontName: string, bodyFontName: string
  * @param weight what font weight to fetch font
  * @returns `.ttf` file of google font
  */
-function fetchTtf(fontName: string, weight: FontWeight): Promise<ArrayBuffer> {
-  return new Promise(async (resolve, reject) => {
+async function fetchTtf(fontName: string, weight: FontWeight): Promise<ArrayBuffer> {
+  try {
     // Get css file from google fonts
-    const css = await (
-      await fetch(`https://fonts.googleapis.com/css?family=${fontName}:${weight}`)
-    ).text()
+    const cssResponse = await fetch(`https://fonts.googleapis.com/css?family=${fontName}:${weight}`)
+    const css = await cssResponse.text()
 
     // Extract .ttf url from css file
     const urlRegex = /url\((https:\/\/fonts.gstatic.com\/s\/.*?.ttf)\)/g
     const match = urlRegex.exec(css)
-    if (match) {
-      // fontData is an ArrayBuffer containing the .ttf file data (get match[1] due to google fonts response format, always contains link twice, but second entry is the "raw" link)
-      const fontData = await (await fetch(match[1])).arrayBuffer()
-      resolve(fontData)
-    } else {
-      reject("Could not fetch font")
+
+    if (!match) {
+      throw new Error("Could not fetch font")
     }
-  })
+
+    // Retrieve font data as ArrayBuffer
+    const fontResponse = await fetch(match[1])
+
+    // fontData is an ArrayBuffer containing the .ttf file data (get match[1] due to google fonts response format, always contains link twice, but second entry is the "raw" link)
+    const fontData = await fontResponse.arrayBuffer()
+
+    return fontData
+  } catch (error) {
+    throw new Error(`Error fetching font: ${error}`)
+  }
 }
 
 export type SocialImageOptions = {
