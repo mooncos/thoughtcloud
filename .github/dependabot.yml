@@ -14,7 +14,7 @@ updates:
     schedule:
       interval: "weekly"
     groups:
-      ci-dependencies:                                                                                                                                                                                                                                                                                         
+      ci-dependencies:
         applies-to: "version-updates"
         patterns:
           - "*"
