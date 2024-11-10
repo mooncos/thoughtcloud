@@ -127,3 +127,114 @@ If you have `generateSocialImages` enabled, you can check out all generated imag
 Images will be generated as `.webp` files, which helps to keep images small (the average image takes ~`19kB`). They are also compressed further using [sharp](https://sharp.pixelplumbing.com/).
 
 When using images, the appropriate [Open Graph](https://ogp.me/) and [Twitter](https://developer.twitter.com/en/docs/twitter-for-websites/cards/guides/getting-started) meta tags will be set to ensure they work and look as expected.
+
+## Examples
+
+Besides the template for the default image generation (found under `quartz/util/socialImage.tsx`), you can also add your own! To do this, you can either edit the source code of that file (not recommended) or create a new one (e.g. `customSocialImage.tsx`, source shown below).
+
+After adding that file, you can update `quartz.config.ts` to use your image generation template as follows:
+
+```ts
+// Import component at start of file
+import { customImage } from "./quartz/util/customSocialImage.tsx"
+
+// In main config
+const config: QuartzConfig = {
+  ...
+  generateSocialImages: {
+    ...
+    imageStructure: customImage, // tells quartz to use your component when generating images
+  },
+}
+```
+
+The following example will generate images that look as follows:
+
+| Light                                      | Dark                                      |
+| ------------------------------------------ | ----------------------------------------- |
+| ![[custom-social-image-preview-light.png]] | ![[custom-social-image-preview-dark.png]] |
+
+This example (and the default template) use colors and fonts from your theme specified in the quartz config. Fonts get passed in as a prop, where `fonts[0]` will contain the header font and `fonts[1]` will contain the body font (more info in the [[#fonts]] section).
+
+```tsx
+import { SatoriOptions } from "satori/wasm"
+import { GlobalConfiguration } from "../cfg"
+import { SocialImageOptions, UserOpts } from "./imageHelper"
+import { QuartzPluginData } from "../plugins/vfile"
+
+export const customImage: SocialImageOptions["imageStructure"] = (
+  cfg: GlobalConfiguration,
+  userOpts: UserOpts,
+  title: string,
+  description: string,
+  fonts: SatoriOptions["fonts"],
+  fileData: QuartzPluginData,
+) => {
+  // How many characters are allowed before switching to smaller font
+  const fontBreakPoint = 22
+  const useSmallerFont = title.length > fontBreakPoint
+
+  const { colorScheme } = userOpts
+  return (
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "flex-start",
+        alignItems: "center",
+        height: "100%",
+        width: "100%",
+      }}
+    >
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          height: "100%",
+          width: "100%",
+          backgroundColor: cfg.theme.colors[colorScheme].light,
+          flexDirection: "column",
+          gap: "2.5rem",
+          paddingTop: "2rem",
+          paddingBottom: "2rem",
+        }}
+      >
+        <p
+          style={{
+            color: cfg.theme.colors[colorScheme].dark,
+            fontSize: useSmallerFont ? 70 : 82,
+            marginLeft: "4rem",
+            textAlign: "center",
+            marginRight: "4rem",
+            fontFamily: fonts[0].name,
+          }}
+        >
+          {title}
+        </p>
+        <p
+          style={{
+            color: cfg.theme.colors[colorScheme].dark,
+            fontSize: 44,
+            marginLeft: "8rem",
+            marginRight: "8rem",
+            lineClamp: 3,
+            fontFamily: fonts[1].name,
+          }}
+        >
+          {description}
+        </p>
+      </div>
+      <div
+        style={{
+          height: "100%",
+          width: "2vw",
+          position: "absolute",
+          backgroundColor: cfg.theme.colors[colorScheme].tertiary,
+          opacity: 0.85,
+        }}
+      />
+    </div>
+  )
+}
+```
