@@ -68,7 +68,7 @@ export default (() => {
     }
 
     // Memoize google fonts
-    if (!fontsPromise) {
+    if (!fontsPromise && cfg.generateSocialImages) {
       fontsPromise = getSatoriFont(cfg.theme.typography.header, cfg.theme.typography.body)
     }
 
