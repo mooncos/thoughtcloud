@@ -2,10 +2,14 @@ import remarkMath from "remark-math"
 import rehypeKatex from "rehype-katex"
 import rehypeMathjax from "rehype-mathjax/svg"
 import { QuartzTransformerPlugin } from "../types"
+import { KatexOptions } from "katex"
+import { Options as MathJaxOptions } from "rehype-mathjax/svg"
 
 interface Options {
   renderEngine: "katex" | "mathjax"
   customMacros: MacroType
+  katexOptions: Omit<KatexOptions, "macros" | "output">
+  mathJaxOptions: MathJaxOptions
 }
 
 interface MacroType {
@@ -22,9 +26,9 @@ export const Latex: QuartzTransformerPlugin<Partial<Options>> = (opts) => {
     },
     htmlPlugins() {
       if (engine === "katex") {
-        return [[rehypeKatex, { output: "html", macros }]]
+        return [[rehypeKatex, { output: "htmlAndMathml", macros, ...(opts?.katexOptions ?? {}) }]]
       } else {
-        return [[rehypeMathjax, { macros }]]
+        return [[rehypeMathjax, { macros, ...(opts?.mathJaxOptions ?? {}) }]]
       }
     },
     externalResources() {
