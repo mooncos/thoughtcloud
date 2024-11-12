@@ -98,6 +98,7 @@ declare module "vfile" {
         lang: string
         enableToc: string
         cssclasses: string[]
+        comments: boolean | string
       }>
   }
 }
