@@ -2,8 +2,7 @@
 title: "Social Media Preview Cards"
 ---
 
-A lot of social media platforms can display a rich preview for your website when sharing a link (most notably, a cover image, a title and a description). Quartz automatically handles most of this for you with reasonable defaults, but for more control, you can customize these by setting [[#Properties | Frontmatter Properties]].
-
+A lot of social media platforms can display a rich preview for your website when sharing a link (most notably, a cover image, a title and a description). Quartz automatically handles most of this for you with reasonable defaults, but for more control, you can customize these by setting [[social images#Frontmatter Properties]].
 Quartz can also dynamically generate and use new cover images for every page to be used in link previews on social media for you. To get started with this, set `generateSocialImages: true` in `quartz.config.ts`.
 
 ## Showcase
@@ -14,7 +13,7 @@ After enabling `generateSocialImages` in `quartz.config.ts`, the social media li
 | ----------------------------------- | ---------------------------------- |
 | ![[social-image-preview-light.png]] | ![[social-image-preview-dark.png]] |
 
-For testing, it is recommended to use [opengraph.xyz](https://www.opengraph.xyz/) to see what the link to your page will look like on various platforms (more info under [[#local testing]]).
+For testing, it is recommended to use [opengraph.xyz](https://www.opengraph.xyz/) to see what the link to your page will look like on various platforms (more info under [[social images#local testing]]).
 
 ## Customization
 
@@ -28,14 +27,8 @@ generateSocialImages: {
   width: 1200, // width to generate with (in pixels)
   height: 630, // height to generate with (in pixels)
   excludeRoot: false, // wether to exclude "/" index path to be excluded from auto generated images (false = use auto, true = use default og image)
-  imageStructure: defaultImage // import from `socialImage.tsx`, recommended to add your own one there as well
 }
 ```
-
-> [!info] Info
->
-> To change the default config, you can pass an object containing all config options you want to customize to `generateSocialImages`.
-> As a simple example, if you want to change the theme, you can pass `generateSocialImages: { colorScheme: "darkMode" }`
 
 ---
 
@@ -56,7 +49,7 @@ The `socialImage` property should contain a link to an image relative to `quartz
 
 > [!info] Info
 >
-> The priority for what image will be used for the cover image looks like the following: `frontmatter property> generated image (if enabled) > default image`.
+> The priority for what image will be used for the cover image looks like the following: `frontmatter property > generated image (if enabled) > default image`.
 >
 > The default image (`quartz/static/og-image.png`) will only be used as a fallback if nothing else is set. If `generateSocialImages` is enabled, it will be treated as the new default per page, but can be overwritten by setting the `socialImage` frontmatter property for that page.
 
@@ -66,7 +59,7 @@ The `socialImage` property should contain a link to an image relative to `quartz
 
 You can fully customize how the images being generated look by passing your own component to `generateSocialImages.imageStructure`. This component takes html/css + some page metadata/config options and converts it to an image using [satori](https://github.com/vercel/satori). Vercel provides an [online playground](https://og-playground.vercel.app/) that can be used to preview how your html/css looks like as a picture. This is ideal for prototyping your custom design.
 
-It is recommended to write your own image components in `quartz/util/socialImage.tsx` or any other `.tsx` file, as passing them to the config won't work otherwise. An example of the default image component can be found in `socialImage.tsx` in `defaultImage()`.
+It is recommended to write your own image components in `quartz/util/og.tsx` or any other `.tsx` file, as passing them to the config won't work otherwise. An example of the default image component can be found in `og.tsx` in `defaultImage()`.
 
 > [!tip] Hint
 >
@@ -76,7 +69,7 @@ Your custom image component should have the `SocialImageOptions["imageStructure"
 
 ```ts
 imageStructure: (
-  cfg: GlobalConfiguration, // global quartz config (useful for getting theme colors and other info)
+  cfg: GlobalConfiguration, // global Quartz config (useful for getting theme colors and other info)
   userOpts: UserOpts, // options passed to `generateSocialImage`
   title: string, // title of current page
   description: string, // description of current page
@@ -115,6 +108,47 @@ export const myImage: SocialImageOptions["imageStructure"] = (...) => {
   return <p style={{ fontFamily: fonts[0].name }}>Cool Header!</p>
 }
 ```
+
+> [!example]- Local fonts
+>
+> For cases where you use a local fonts under `static` folder, make sure to set the correct `@font-face` in `custom.scss`
+>
+> ```scss title="custom.scss"
+> @font-face {
+>   font-family: "Newsreader";
+>   font-style: normal;
+>   font-weight: normal;
+>   font-display: swap;
+>   src: url("/static/Newsreader.woff2") format("woff2");
+> }
+> ```
+>
+> Then in `quartz/util/og.tsx`, you can load the satori fonts like so:
+>
+> ```tsx title="quartz/util/og.tsx"
+> const headerFont = joinSegments("static", "Newsreader.woff2")
+> const bodyFont = joinSegments("static", "Newsreader.woff2")
+>
+> export async function getSatoriFont(cfg: GlobalConfiguration): Promise<SatoriOptions["fonts"]> {
+>   const headerWeight: FontWeight = 700
+>   const bodyWeight: FontWeight = 400
+>
+>   const url = new URL(`https://${cfg.baseUrl ?? "example.com"}`)
+>
+>   const [header, body] = await Promise.all(
+>     [headerFont, bodyFont].map((font) =>
+>       fetch(`${url.toString()}/${font}`).then((res) => res.arrayBuffer()),
+>     ),
+>   )
+>
+>   return [
+>     { name: cfg.theme.typography.header, data: header, weight: headerWeight, style: "normal" },
+>     { name: cfg.theme.typography.body, data: body, weight: bodyWeight, style: "normal" },
+>   ]
+> }
+> ```
+>
+> This font then can be used with your custom structure
 
 ### Local testing
 
@@ -238,3 +272,130 @@ export const customImage: SocialImageOptions["imageStructure"] = (
   )
 }
 ```
+
+> [!example]- Advanced example
+>
+> The following example includes a customized social image with a custom background and formatted date.
+>
+> ```typescript title="custom-og.tsx"
+> export const og: SocialImageOptions["Component"] = (
+>   cfg: GlobalConfiguration,
+>   fileData: QuartzPluginData,
+>   { colorScheme }: Options,
+>   title: string,
+>   description: string,
+>   fonts: SatoriOptions["fonts"],
+> ) => {
+>   let created: string | undefined
+>   let reading: string | undefined
+>   if (fileData.dates) {
+>     created = formatDate(getDate(cfg, fileData)!, cfg.locale)
+>   }
+>   const { minutes, text: _timeTaken, words: _words } = readingTime(fileData.text!)
+>   reading = i18n(cfg.locale).components.contentMeta.readingTime({
+>     minutes: Math.ceil(minutes),
+>   })
+>
+>   const Li = [created, reading]
+>
+>   return (
+>     <div
+>       style={{
+>         position: "relative",
+>         display: "flex",
+>         flexDirection: "row",
+>         alignItems: "flex-start",
+>         height: "100%",
+>         width: "100%",
+>         backgroundImage: `url("https://${cfg.baseUrl}/static/og-image.jpeg")`,
+>         backgroundSize: "100% 100%",
+>       }}
+>     >
+>       <div
+>         style={{
+>           position: "absolute",
+>           top: 0,
+>           left: 0,
+>           right: 0,
+>           bottom: 0,
+>           background: "radial-gradient(circle at center, transparent, rgba(0, 0, 0, 0.4) 70%)",
+>         }}
+>       />
+>       <div
+>         style={{
+>           display: "flex",
+>           height: "100%",
+>           width: "100%",
+>           flexDirection: "column",
+>           justifyContent: "flex-start",
+>           alignItems: "flex-start",
+>           gap: "1.5rem",
+>           paddingTop: "4rem",
+>           paddingBottom: "4rem",
+>           marginLeft: "4rem",
+>         }}
+>       >
+>         <img
+>           src={`"https://${cfg.baseUrl}/static/icon.jpeg"`}
+>           style={{
+>             position: "relative",
+>             backgroundClip: "border-box",
+>             borderRadius: "6rem",
+>           }}
+>           width={80}
+>         />
+>         <div
+>           style={{
+>             display: "flex",
+>             flexDirection: "column",
+>             textAlign: "left",
+>             fontFamily: fonts[0].name,
+>           }}
+>         >
+>           <h2
+>             style={{
+>               color: cfg.theme.colors[colorScheme].light,
+>               fontSize: "3rem",
+>               fontWeight: 700,
+>               marginRight: "4rem",
+>               fontFamily: fonts[0].name,
+>             }}
+>           >
+>             {title}
+>           </h2>
+>           <ul
+>             style={{
+>               color: cfg.theme.colors[colorScheme].gray,
+>               gap: "1rem",
+>               fontSize: "1.5rem",
+>               fontFamily: fonts[1].name,
+>             }}
+>           >
+>             {Li.map((item, index) => {
+>               if (item) {
+>                 return <li key={index}>{item}</li>
+>               }
+>             })}
+>           </ul>
+>         </div>
+>         <p
+>           style={{
+>             color: cfg.theme.colors[colorScheme].light,
+>             fontSize: "1.5rem",
+>             overflow: "hidden",
+>             marginRight: "8rem",
+>             textOverflow: "ellipsis",
+>             display: "-webkit-box",
+>             WebkitLineClamp: 7,
+>             WebkitBoxOrient: "vertical",
+>             lineClamp: 7,
+>             fontFamily: fonts[1].name,
+>           }}
+>         >
+>           {description}
+>         </p>
+>       </div>
+>     </div>
+>   )
+> }
+> ```

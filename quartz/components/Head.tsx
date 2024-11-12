@@ -5,9 +5,8 @@ import { googleFontHref } from "../util/theme"
 import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
 import satori, { SatoriOptions } from "satori"
 import fs from "fs"
-import { ImageOptions, SocialImageOptions, getSatoriFont } from "../util/imageHelper"
 import sharp from "sharp"
-import { defaultImage } from "../util/socialImage"
+import { ImageOptions, SocialImageOptions, getSatoriFont, defaultImage } from "../util/og"
 import { unescapeHTML } from "../util/escape"
 
 /**
@@ -20,15 +19,12 @@ async function generateSocialImage(
   imageDir: string,
 ) {
   const fonts = await fontsPromise
+  const { width, height } = userOpts
 
   // JSX that will be used to generate satori svg
-  const imageElement = userOpts.imageStructure(cfg, userOpts, title, description, fonts, fileData)
+  const imageComponent = userOpts.imageStructure(cfg, userOpts, title, description, fonts, fileData)
 
-  const svg = await satori(imageElement, {
-    width: userOpts.width,
-    height: userOpts.height,
-    fonts: fonts,
-  })
+  const svg = await satori(imageComponent, { width, height, fonts })
 
   // Convert svg directly to webp (with additional compression)
   const compressed = await sharp(Buffer.from(svg)).webp({ quality: 40 }).toBuffer()
@@ -93,11 +89,11 @@ export default (() => {
       description = fileData.frontmatter?.description
     }
 
-    const imageDir = joinSegments(ctx.argv.output, "static", "social-images")
+    const fileDir = joinSegments(ctx.argv.output, "static", "social-images")
     if (cfg.generateSocialImages) {
       // Generate folders for social images (if they dont exist yet)
-      if (!fs.existsSync(imageDir)) {
-        fs.mkdirSync(imageDir, { recursive: true })
+      if (!fs.existsSync(fileDir)) {
+        fs.mkdirSync(fileDir, { recursive: true })
       }
 
       if (fileName) {
@@ -107,14 +103,14 @@ export default (() => {
             title,
             description,
             fileName,
-            fileDir: imageDir,
+            fileDir,
             fileExt: extension,
             fontsPromise,
             cfg,
             fileData,
           },
           fullOptions,
-          imageDir,
+          fileDir,
         )
       }
     }
@@ -128,8 +124,8 @@ export default (() => {
     const iconPath = joinSegments(baseDir, "static/icon.png")
 
     const ogImageDefaultPath = `https://${cfg.baseUrl}/static/og-image.png`
-    // "static/social-images/filename.ext"
-    const ogImageGeneratedPath = `https://${cfg.baseUrl}/${imageDir.replace(
+    // "static/social-images/slug-filename.md.webp"
+    const ogImageGeneratedPath = `https://${cfg.baseUrl}/${fileDir.replace(
       `${ctx.argv.output}/`,
       "",
     )}/${fileName}.${extension}`
