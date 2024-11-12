@@ -71,9 +71,8 @@ export const FrontMatter: QuartzTransformerPlugin<Partial<Options>> = (userOpts)
             const cssclasses = coerceToArray(coalesceAliases(data, ["cssclasses", "cssclass"]))
             if (cssclasses) data.cssclasses = cssclasses
 
-            const socialImage = coerceToArray(
-              coalesceAliases(data, ["socialImage", "image", "cover"]),
-            )
+            const socialImage = coalesceAliases(data, ["socialImage", "image", "cover"])
+
             if (socialImage) data.socialImage = socialImage
 
             // fill in frontmatter
@@ -98,6 +97,7 @@ declare module "vfile" {
         lang: string
         enableToc: string
         cssclasses: string[]
+        socialImage: string
         comments: boolean | string
       }>
   }
