@@ -164,7 +164,7 @@ When using images, the appropriate [Open Graph](https://ogp.me/) and [Twitter](h
 
 ## Examples
 
-Besides the template for the default image generation (found under `quartz/util/socialImage.tsx`), you can also add your own! To do this, you can either edit the source code of that file (not recommended) or create a new one (e.g. `customSocialImage.tsx`, source shown below).
+Besides the template for the default image generation (found under `quartz/util/og.tsx`), you can also add your own! To do this, you can either edit the source code of that file (not recommended) or create a new one (e.g. `customSocialImage.tsx`, source shown below).
 
 After adding that file, you can update `quartz.config.ts` to use your image generation template as follows:
 
