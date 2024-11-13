@@ -7,10 +7,10 @@ tags:
   - legal
   - copyright
 date: 2024-11-02
-lastmod: 2024-11-02
+lastmod: 2024-11-10
 draft: false
 ---
-I've seen many news articles and opinion pieces recently that support training generative AI, most particularly LLMs (such as ChatGPT/GPT-4, LLaMa, and Midjourney) on the broader internet, as well as on more traditional copyrighted works. The general sentiment from the industry and some critics is that training should not consider the copyright holders for all of the above. 
+I've seen many news articles and opinion pieces recently that support training generative AI, most particularly LLMs (such as the ChatGPT/GPT-4 family, LLaMa, Bard, Claude, and countless others) on the broader internet, as well as on more traditional copyrighted works. The general sentiment from the industry and some critics is that training should not consider the copyright holders for all of the above. 
 
 <img src="/Attachments/but-he-can.jpg" alt="'I know, but he can' meme, with the RIAA defeating AI art for independent illustrators" style="height: 30em;margin: 0% 25%" loading="lazy">
 
@@ -20,4 +20,5 @@ However, this argument forgets that intangible rights are not *yet* so centraliz
 
 Unfortunately, because US copyright law is so easily abused, I think the most likely outcome is that publishers/centralized rights holders get their due, and individual creators get the shaft. This makes me sympathetic to arguments against specific parts of the US's copyright regime as enforced by the courts, such as the DMCA or the statutory language of fair use. We as a voting population have the power to compel our representatives to enact reforms that take the threat of ultimate centralization into account. We can even work to break down what's already here. But I don't think that AI should be the impetus for arguments against the system as a whole.
 
-Finally, remember that perfect is the enemy of good enough. While we're having these discussions about how to regulate GenAI, ==unregulated use== is causing real economic and personal harm to creators and ==underrepresented minorities.==
+Finally, remember that perfect is the enemy of good enough. While we're having these discussions about how to regulate GenAI, ==unregulated use== is causing real economic and personal [[Atomic/gen-ai#Causes for concern|harm]] to creators and ==underrepresented minorities.==
+- Links to the rest of the content to be added.

@@ -6,9 +6,16 @@ tags:
   - seedling
 date: 2024-01-13
 lastmod: 2024-03-07
+noRSS: true
 ---
-One of the core philosophies of digital gardening is that one should document their learning process when trying new things. As such, here's my very disorganized to-dos and to-reads in the form of a public bookmark list. This page will change very often.
+One of the core philosophies of digital gardening is that one should document their learning process when trying new things. As such, here's my very disorganized [[todo-list|to-dos]] and to-reads in the form of a public bookmark list. This page will change very often.
 
+- [How to Delegate Effectively as your Responsibility Grows](https://www.hitsubscribe.com/how-to-delegate-effectively-as-your-responsibility-grows/)
+- Customization
+	- [eww tray](https://www.reddit.com/r/unixporn/comments/1cjd39h/bspwm_finally_eww_bar_with_a_native_tray_system/)
+	- [eww at its logical extreme](https://www.reddit.com/r/unixporn/comments/17whr4h/xmonad_i_have_no_idea_whats_impossible_for_eww/)
+	- [potential colors](https://www.reddit.com/r/unixporn/comments/1g0ok8d/river_a_calm_and_cute_rice/)
+	- [top panel info](https://www.reddit.com/r/unixporn/comments/19csv7m/sway_fedora_sway_rice_new_wave_loving_this/)
 - [YouTube: Tech for Tea - The Mess that is Application Theming](https://youtube.com/watch?v=HqlwUjogMSM)
 - [Nyxt Browser](https://nyxt.atlas.engineer/)
 - [The Heat Death of the Internet](https://www.takahe.org.nz/heat-death-of-the-internet/)

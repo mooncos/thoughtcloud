@@ -10,7 +10,7 @@ date: 2024-11-02
 lastmod: 2024-11-02
 draft: true
 ---
-Generated output may infringe the training data.
+A [[Atomic/gen-ai|generative AI]]'s output may infringe its training data.
 
 First, generated output is certainly not copyrightable. The US is extremely strict when it comes to the human authorship requirement for protection. If an AI is seen as the creator, the requirement is obviously not satisfied. And the human "pushing the button" probably isn't enough either. But does the output infringe the training data? It depends.
 ## Human Authorship

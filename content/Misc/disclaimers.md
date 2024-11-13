@@ -10,7 +10,10 @@ Please accept that I reserve the right to be wrong on this website. I don’t cl
 
 If you don’t like how I’ve done something, feel free to write a piece in your own garden for it. I’d love to read it! It’s no secret that a lot of this garden comprises my gripes with various things. 
 ## Disclaimer
-It goes without saying that anything herein constitutes my own opinion and not the opinion of any affiliated person or entity. Nothing on this website is legal advice either. 
+- It goes without saying that anything herein constitutes my own opinion and not the opinion of any affiliated person or entity, such as my employer or their business relationships. 
+- I am not a lawyer, and **I am not your lawyer**.
+- Nothing on this website should be construed to create an attorney-client relationship. 
+- Nothing on this website is a substitute for legal advice. 
 ## Attribution
 Feel free to properly reference any of the content within in your own gardens or work. Don’t plagiarize. A link to the page you used is just fine.
 

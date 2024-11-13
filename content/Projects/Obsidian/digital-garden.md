@@ -41,11 +41,7 @@ You don't want bad spiders/crawlers poking around on your site to try to find vu
 - [Explorer](https://quartz.jzhao.xyz/features/explorer) 
 	- \[Desktop\] on your left: jump to any page on the site.
 	- \[Mobile\] visit the [[sitemap|Sitemap]].
-- [Graph View](https://help.obsidian.md/Plugins/Graph+view) 
+- [Graph View](https://help.obsidian.md/Plugins/Graph+view): Below content, above comments
 	- An [[Programs I Like/obsidian|Obsidian]] feature which acts as a map of what pages link to each other. Click on it for a map of the entire site and how it interconnects. It doesn't use Obsidian's implementation directly, but since [[Projects/Obsidian/digital-garden|the site generator I use]] is heavily inspired by Obsidian and [Obsidian Publish]( https://obsidian.md/publish ), it remains.
-	- \[Desktop\]: right pane
-	- \[Mobile\]: below content and comments
-- Backlinks
+- Backlinks: Below content, above comments
 	- A list of all pages on the site that link to the current one.
-	- \[Desktop\]: right pane
-	- \[Mobile\]: below content and comments

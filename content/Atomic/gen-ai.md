@@ -13,7 +13,7 @@ lastmod: 2024-11-02
 draft: true
 ---
 Generative AI models from different sources are architected in a variety of different ways, but they all boil down to one abstract process: tuning an absurdly massive number of parameters to values that produce the most desirable output. (note: [CGP Grey's video on AI](https://www.youtube.com/watch?v=R9OHn5ZF4Uo) and its follow-up are mainly directed towards neural networks, but do apply to LLMs, and do a great job illustrating this). This process requires a gargantuan stream of data to use to calibrate those parameters and then test the model.
-- Sidebar: you're nearly guaranteed not to find the optimal combination of several billion parameters, each tunable to several decimals. When I say "desirable," I really mean "good enough."
+- Sidebar: you're nearly guaranteed not to find the optimal combination of several billion parameters, each tunable to several decimals. When I say "desirable," I really mean "good enough." This phenomenon is called gradient descent, and it's a foundational visualization of how AI learns, but [it is](https://arxiv.org/abs/2212.07677) and [it isn't](https://arxiv.org/abs/2310.08540) the whole picture.
 
 Generative AI resembles a Chinese Room. [The Chinese Room](https://plato.stanford.edu/entries/chinese-room/) is a philosophical exercise authored by John Searle where the (in context, American) subject is locked in a room and receives symbols in Chinese slipped under the door. A computer program tells the subject what Chinese outputs to send back out under the door based on patterns and combinations of the input. The subject does not understand Chinese. Yet to an observer of Searle's room, it **appears** as if whoever is inside it has a firm understanding of the language.
 
@@ -36,6 +36,10 @@ Training is a deterministic process. It's a pure, one-way, data-to-model transfo
 
 Training can't be analogized to human learning processes, because when an AI trains by "reading" something, it isn't reading for the *forest*; it's reading for the *trees*. In the model, if some words are more frequently associated together, then that association is more "correct" to generate in a given scenario than other options. A parameter sometimes called "temperature" determines how far the model will stray from the correct next word. And the only data to determine whether an association *is* correct would be that training input. This means that an AI trains only on the words as they are on the page. Training can't have some external indicator of semantics that a secondary natural-language processor on the generation side could. If it could, it would need some encoding—some expression—that it turns the facts into. Instead, it just incorporates the word as it read it in, and the data about the body of text it was contained in. 
 
+Some transformer models include a structure called a Multi-Layer Perceptron ("MLP" { *training is magic -ed*. }), which is often simplified as "the place where the AI stores facts." However, it's just another matrix-based component of the model with different math that makes it better at preserving a type of word associations. Mathematically, most word generation is linear (really linear-and-tomfoolery but whatever) on the probability-of-occurrence scale. An MLP corrects this mathematical limitation by adding "layers" of generation that preserve associations in non-linearly separable data, a class which *includes* facts. As such, it makes the model perform better if MLPs get more authority over the output of the model in portions of the output where it makes sense to give it that control (and determining that "where" is yet another black box of training). If you've ever seen an AI hallucinate a falsehood in the next sentence after it's been trained on the correct answer, you know that the MLP isn't really storing facts.
+- Phrases like "authority over the output" really belong in a generation section. It's probably an intuitive enough concept to be included here without further context though.
+- Sidebar: Taking this to its logical extreme and demonstrating that self-attention (or any sort of attention component, really) is not a substitute for short-term memory would solidify the fact that generative AI training cannot be likened to a human's capacity to process and store information. 
+
 As such, idea and expression are meaningless distinctions to AI.
 
 [[Misc/training-copyright|Training AI may be copyright infringement]]. If it is, perhaps the biggest legal question surrounding AI is: [[Essays/normative-ai#Fair Use|does AI training count as fair use?]]
@@ -43,11 +47,13 @@ As such, idea and expression are meaningless distinctions to AI.
 
 <img src="/Attachments/common_crap.svg" alt="Common Crawl logo edited to say 'common crap' instead" style="padding:0% 5%">
 
-A very big middle finger to the Common Crawl dataset, who still tries to scrape this website. [[Projects/Obsidian/digital-garden#Block the bot traffic!|Block the bot traffic]]. If I had the time or motivation, I would find a way to instead of blocking these bots, redirect them to an AI generated fanfiction featuring characters from The Bee Movie, including poisoned codewords.
+A very big middle finger to the Common Crawl dataset, whose CCBot still tries to scrape this website. [[Projects/Obsidian/digital-garden#Block the bot traffic!|Block the bot traffic]]. If I had the time or motivation, I would find a way to instead of blocking these bots, redirect them to an AI generated fanfiction featuring characters from The Bee Movie, including poisoned codewords.
 ## Generation
 Generative AI training creates a sophisticated next-word predictor that generates text based on the words it has read and written previously. 
 
-In the case of image models, it creates an interpolator that starts from a noise pattern and moves values until they resemble portions of its training data. Specifically, portions which it has been told have orthogonal expression to the prompt given to it by the user.
+In the case of image models, it creates an interpolator that starts from a noise pattern and moves values until they resemble portions of its training data. Specifically, portions which it has been told have roughly parallel expression to the prompt given to it by the user.
+
+This is the reason that the term "hallucination" is misleading: **all AI-generated text is "hallucinated."** some of it just happens to be "shaped" like reliable information. Many discrete procedures are bolted on to the back of the model to bring the reliability numbers up, but they do nothing to affect the originality of the work.
 
 [[Misc/generation-copyright|Generated output may infringe the training data]].
 ## Other/emerging terminology
@@ -62,4 +68,4 @@ In the case of image models, it creates an interpolator that starts from a noise
 - [Pivot to AI](https://pivot-to-ai.com/) is a hilariously snarky newsletter (and RSS feed!) that lampoons AI and particularly AI hype for what it is.
 - Read about the problems that generative AI is causing at the [Distributed AI Research Institute](https://www.dair-institute.org/).
 
-What if we invert GenAI to make a /gen AI lmao
+Okay, so ChatGPT lies, right? Well if we invert GenAI, it would make a /gen AI lmao

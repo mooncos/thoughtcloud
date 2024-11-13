@@ -10,7 +10,7 @@ date: 2024-11-02
 lastmod: 2024-11-02
 draft: true
 ---
-AI training may be [[Resources/copyright|copyright]] infringement.
+Generative AI training may be [[Resources/copyright|copyright]] infringement.
 
 > [!info] *mea culpa*
 > It's very difficult to keep discussions of training and generation separate because they're related concepts. They do not directly flow from one another though, so I've done my best to divide the subject.

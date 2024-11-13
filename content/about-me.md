@@ -1,6 +1,7 @@
 ---
 title: About Me
 date: 2023-08-23
+lastmod: 2024-11-13
 ---
 I’m an enthusiast for all things DIY. Hardware or software, if there’s a project to be had I will travel far down the rabbit hole to see it completed. 
 
@@ -13,3 +14,20 @@ I obsess over minimizing my digital footprint with respect to services where the
 I enjoy rock climbing, building & flying FPV drones, reading, and baking. Hobby electronics repair was previously one of my interests, but modern devices are unfortunately no longer repairable to the extent that I’m able to do so.
 
 I can be found in your local cafe, sipping caffeine that's more dessert than coffee, and typing furiously into a legal document or class outline. If I'm procrastinating, I'll probably be debugging some selfhost service or writing a toy program in Haskell.
+
+Languages I know (in rough order):
+- Java
+- Python
+- C/C++
+- Lua
+- Ada
+- C#
+- OSL
+- JS/**TS**
+- Ruby
+- Carbon
+- Dart/Flutter
+- Haskell
+- **Rust**
+- Gleam
+- Excel (sadly)
