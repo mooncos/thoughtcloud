@@ -2,7 +2,7 @@ import { render } from "preact-render-to-string"
 import { QuartzComponent, QuartzComponentProps } from "./types"
 import HeaderConstructor from "./Header"
 import BodyConstructor from "./Body"
-import NavbarContructor from "./Navbar";
+import NavbarContructor from "./Navbar"
 import { JSResourceToScriptElement, StaticResources } from "../util/resources"
 import { clone, FullSlug, RelativeURL, joinSegments, normalizeHastElement } from "../util/path"
 import { visit } from "unist-util-visit"

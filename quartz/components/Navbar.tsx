@@ -9,8 +9,8 @@ const Navbar: QuartzComponent = ({ children }: QuartzComponentProps) => {
         ))}
       </ul>
     </nav>
-  ) : null;
-};
+  ) : null
+}
 
 Navbar.css = `
 nav {
