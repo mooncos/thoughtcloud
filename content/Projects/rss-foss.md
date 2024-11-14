@@ -5,7 +5,7 @@ tags:
   - project
   - seedling
 date: 2024-02-14
-lastmod: 2024-08-31
+lastmod: 2024-11-14
 ---
 RSS (+ derivative Atom) is the most convenient and privacy-conscious way to subscribe to a website, social media account, and more. No site analytics, no page loading, no Javascript, no ads. All the website can see is that you pulled one file from it, but you can still read all the content that you wanted from the website in a compact format. RSS isn't dead (despite [suggestions to the contrary haha](https://rss-is-dead.lol)), but it's woefully underused. Admittedly, it lacks **economic incentives** for major websites to adopt it because it runs contrary to the modern idea of a content farm. But the **convenience for users** in its familiarity and centralization both greatly increase the quality of a user's experience on the internet. 
 
