@@ -147,7 +147,7 @@ export default (() => {
 
     // Override with frontmatter url if existing
     if (frontmatterImgUrl) {
-      ogImagePath = `https://${cfg.baseUrl}/static/${frontmatterImgUrl}`
+      ogImagePath = `https://${cfg.baseUrl}/${frontmatterImgUrl}`
     }
 
     // Url of current page
