@@ -12,6 +12,8 @@ draft: false
 ---
 ## Desktop
 - [Mozilla Thunderbird](https://www.thunderbird.net/en-US/)
+	- Limitations:
+		- If an entry retains the same title but other properties (date, content, etc) change, it will not be shown in the reader.
 ## In the Browser
 ### Browser-native
 - [Vivaldi Feed Reader](https://vivaldi.com/features/feed-reader/)

@@ -25,7 +25,7 @@ export default ((opts?: Optionss) => {
         <p>
           © be-far {year}. Powered by <a href="https://quartz.jzhao.xyz/">Quartz</a>.
         </p>
-        <p>not legal advice 🤟</p>
+        <p>not a substitute for legal advice 🤟</p>
         <ul>
           {Object.entries(links).map(([text, link]) => (
             <li>
