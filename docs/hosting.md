@@ -247,6 +247,7 @@ server {
 }
 ```
 ### Using Apache
+
 Here's an example of how to do this with Apache:
 
 ```apache title=".htaccess"
@@ -264,6 +265,7 @@ RewriteRule ^(.*)$ $1.html [L]
 RewriteCond %{REQUEST_FILENAME} -d
 RewriteRule ^(.*)/$ $1/index.html [L]
 ```
+
 Don't forget to activate brotli / gzip compression.
 
 ### Using Caddy
