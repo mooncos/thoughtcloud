@@ -246,6 +246,7 @@ server {
     }
 }
 ```
+
 ### Using Apache
 
 Here's an example of how to do this with Apache:
