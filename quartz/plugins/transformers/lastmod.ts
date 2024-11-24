@@ -48,7 +48,15 @@ export const CreatedModifiedDate: QuartzTransformerPlugin<Partial<Options>> = (u
                 created ||= st.birthtimeMs
                 modified ||= st.mtimeMs
               } else if (source === "frontmatter" && file.data.frontmatter) {
-                created ||= file.data.frontmatter.date as MaybeDate
+                if (!created) {
+                  created = file.data.frontmatter.date as MaybeDate
+                  if (typeof created === "string" && /^\d{4}-\d{2}-\d{2}$/.test(created)) {
+                    // If the date is in YYYY-MM-DD format, it will be interpreted as UTC midnight
+                    // which will mean it renders incorrectly as the previous day. Adding a time
+                    // makes it interpret as the local timezone instead so it will render correctly.
+                    created += " 00:00"
+                  }
+                }
                 modified ||= file.data.frontmatter.lastmod as MaybeDate
                 modified ||= file.data.frontmatter.updated as MaybeDate
                 modified ||= file.data.frontmatter["last-modified"] as MaybeDate
