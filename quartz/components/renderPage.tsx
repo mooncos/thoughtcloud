@@ -12,6 +12,7 @@ import { i18n } from "../i18n"
 interface RenderComponents {
   head: QuartzComponent
   header: QuartzComponent[]
+  pageHeader: QuartzComponent[]
   beforeBody: QuartzComponent[]
   pageBody: QuartzComponent
   afterBody: QuartzComponent[]
@@ -191,6 +192,7 @@ export function renderPage(
   const {
     head: Head,
     header,
+    pageHeader,
     beforeBody,
     pageBody: Content,
     afterBody,
@@ -202,19 +204,19 @@ export function renderPage(
   const Body = BodyConstructor()
 
   const LeftComponent = (
-    <aside class="left sidebar">
+    <section class="left sidebar">
       {left.map((BodyComponent) => (
         <BodyComponent {...componentData} />
       ))}
-    </aside>
+    </section>
   )
 
   const RightComponent = (
-    <aside class="right sidebar">
+    <section class="right sidebar">
       {right.map((BodyComponent) => (
         <BodyComponent {...componentData} />
       ))}
-    </aside>
+    </section>
   )
 
   const lang = componentData.fileData.frontmatter?.lang ?? cfg.locale?.split("-")[0] ?? "en"
@@ -230,8 +232,13 @@ export function renderPage(
           </Header>
           <Body {...componentData}>
             {LeftComponent}
-            <main class="center">
+            <section class="center">
               <div class="page-header">
+                <Header {...componentData}>
+                  {pageHeader.map((HeaderComponent) => (
+                    <HeaderComponent {...componentData} />
+                  ))}
+                </Header>
                 <div class="popover-hint">
                   {beforeBody.map((BodyComponent) => (
                     <BodyComponent {...componentData} />
@@ -245,7 +252,7 @@ export function renderPage(
                   <BodyComponent {...componentData} />
                 ))}
               </div>
-            </main>
+            </section>
             {RightComponent}
             <Footer {...componentData} />
           </Body>
