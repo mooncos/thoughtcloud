@@ -13,7 +13,6 @@ interface RenderComponents {
   head: QuartzComponent
   header: QuartzComponent[]
   pageHeader: QuartzComponent[]
-  beforeBody: QuartzComponent[]
   pageBody: QuartzComponent
   afterBody: QuartzComponent[]
   left: QuartzComponent[]
@@ -193,7 +192,6 @@ export function renderPage(
     head: Head,
     header,
     pageHeader,
-    beforeBody,
     pageBody: Content,
     afterBody,
     left,
@@ -234,13 +232,8 @@ export function renderPage(
             {LeftComponent}
             <section class="center">
               <div class="page-header">
-                <Header {...componentData}>
-                  {pageHeader.map((HeaderComponent) => (
-                    <HeaderComponent {...componentData} />
-                  ))}
-                </Header>
                 <div class="popover-hint">
-                  {beforeBody.map((BodyComponent) => (
+                  {pageHeader.map((BodyComponent) => (
                     <BodyComponent {...componentData} />
                   ))}
                 </div>
