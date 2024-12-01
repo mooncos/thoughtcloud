@@ -204,19 +204,19 @@ export function renderPage(
   const Body = BodyConstructor()
 
   const LeftComponent = (
-    <section class="left sidebar">
+    <aside class="left sidebar">
       {left.map((BodyComponent) => (
         <BodyComponent {...componentData} />
       ))}
-    </section>
+    </aside>
   )
 
   const RightComponent = (
-    <section class="right sidebar">
+    <aside class="right sidebar">
       {right.map((BodyComponent) => (
         <BodyComponent {...componentData} />
       ))}
-    </section>
+    </aside>
   )
 
   const lang = componentData.fileData.frontmatter?.lang ?? cfg.locale?.split("-")[0] ?? "en"
