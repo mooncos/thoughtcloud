@@ -12,7 +12,7 @@ import { i18n } from "../i18n"
 interface RenderComponents {
   head: QuartzComponent
   header: QuartzComponent[]
-  pageHeader: QuartzComponent[]
+  beforeBody: QuartzComponent[]
   pageBody: QuartzComponent
   afterBody: QuartzComponent[]
   left: QuartzComponent[]
@@ -191,7 +191,7 @@ export function renderPage(
   const {
     head: Head,
     header,
-    pageHeader,
+    beforeBody,
     pageBody: Content,
     afterBody,
     left,
@@ -233,7 +233,7 @@ export function renderPage(
             <section class="center">
               <div class="page-header">
                 <div class="popover-hint">
-                  {pageHeader.map((BodyComponent) => (
+                  {beforeBody.map((BodyComponent) => (
                     <BodyComponent {...componentData} />
                   ))}
                 </div>

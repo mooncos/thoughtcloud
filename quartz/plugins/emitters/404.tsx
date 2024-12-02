@@ -15,7 +15,7 @@ export const NotFoundPage: QuartzEmitterPlugin = () => {
   const opts: FullPageLayout = {
     ...sharedPageComponents,
     pageBody: NotFound(),
-    pageHeader: [],
+    beforeBody: [],
     left: [],
     right: [],
   }
