@@ -19,7 +19,7 @@ const config: QuartzConfig = {
     timezone: "system",
     baseUrl: "quartz.jzhao.xyz",
     ignorePatterns: ["private", "templates", ".obsidian"],
-    defaultDateType: "created",
+    defaultDateType: ["published", "created"],
     generateSocialImages: false,
     theme: {
       fontOrigin: "googleFonts",
