@@ -54,6 +54,7 @@ async function buildQuartz(argv: Argv, mut: Mutex, clientRefresh: () => void) {
   const perf = new PerfTimer()
   const output = argv.output
 
+  LuxonSettings.throwOnInvalid = true
   LuxonSettings.defaultLocale = cfg.configuration.locale
 
   const pluginCount = Object.values(cfg.plugins).flat().length
