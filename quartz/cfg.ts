@@ -75,6 +75,12 @@ export interface GlobalConfiguration {
    * Region Codes: https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
    */
   locale: ValidLocale
+  /**
+   * The default timezone when handling dates.
+   * Valid options are "system" (default), "utc", an IANA string, or a UTC offset
+   * https://moment.github.io/luxon/#/zones?id=specifying-a-zone
+   */
+  timezone?: "system" | string
 }
 
 export interface QuartzConfig {

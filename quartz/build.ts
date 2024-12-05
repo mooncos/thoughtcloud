@@ -56,6 +56,7 @@ async function buildQuartz(argv: Argv, mut: Mutex, clientRefresh: () => void) {
 
   LuxonSettings.throwOnInvalid = true
   LuxonSettings.defaultLocale = cfg.configuration.locale
+  if (cfg.configuration.timezone) LuxonSettings.defaultZone = cfg.configuration.timezone
 
   const pluginCount = Object.values(cfg.plugins).flat().length
   const pluginNames = (key: "transformers" | "filters" | "emitters") =>
