@@ -86,11 +86,15 @@ h5 {
 }
 
 p {
+  text-indent: 8px;
   margin-top: 2px;
   margin-bottom: 16px;
   padding-top: 2px;
-  text-indent: 8px;
 }
+
+// :is(h1, h2, h3, h4, .tags *) + p { 
+//   text-indent: 16px;
+// }
 
 p:has(+ ul) {
   margin-bottom: 2px;
@@ -117,8 +121,8 @@ footer > p {
   padding-bottom: 4px;
 }
 .content-meta > span {
-  margin-left: 8px;
-  margin-right: 8px;
+  // margin-left: 8px;
+  // margin-right: 8px;
 }
 
 ul {
@@ -193,4 +197,11 @@ ul {
 
 #toc-content ul {
   margin: 0px 0px;
+}
+
+// Custom for my site
+.bf-icon {
+  max-width:0.8em;
+  max-height:0.8em;
+  margin: 0px;
 }

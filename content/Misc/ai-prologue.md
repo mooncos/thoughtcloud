@@ -20,5 +20,10 @@ However, this argument forgets that intangible rights are not *yet* so centraliz
 
 Unfortunately, because US copyright law is so easily abused, I think the most likely outcome is that publishers/centralized rights holders get their due, and individual creators get the shaft. This makes me sympathetic to arguments against specific parts of the US's copyright regime as enforced by the courts, such as the DMCA or the statutory language of fair use. We as a voting population have the power to compel our representatives to enact reforms that take the threat of ultimate centralization into account. We can even work to break down what's already here. But I don't think that AI should be the impetus for arguments against the system as a whole.
 
-Finally, remember that perfect is the enemy of good enough. While we're having these discussions about how to regulate GenAI, ==unregulated use== is causing real economic and personal [[Atomic/gen-ai#Causes for concern|harm]] to creators and ==underrepresented minorities.==
-- Links to the rest of the content to be added.
+Finally, remember that perfect is the enemy of good enough. While we're having these discussions about how to regulate GenAI, unregulated use is causing real economic and personal [[Atomic/gen-ai#Causes for concern|harm]] to creators, underrepresented minorities, and consumers as a whole. I am personally in favor of courts reaching substantive issues sooner than later. As with Section 230, Congress works best in a reflective context, where they can proscribe an approach that they don't like rather than prescribe an approach without prior experimentation.
+## Further Reading
+- [[Atomic/gen-ai|Generative AI, explained]]
+- [[Misc/training-copyright|Copyright applied to training]]
+- [[Misc/generation-copyright|Copyright applied to output]]
+- [[Essays/normative-ai|Why copyright ought to be applied to AI]]
+- [[Essays/no-ai-fraud-act|No AI FRAUD Act bill, Section 230, and platforms]]
