@@ -56,7 +56,7 @@ export interface GlobalConfiguration {
   /** Glob patterns to not search */
   ignorePatterns: string[]
   /** Whether to use created, modified, or published as the default type of date */
-  defaultDateType: ValidDateType
+  defaultDateType: ValidDateType | ValidDateType[]
   /** Base URL to use for CNAME files, sitemaps, and RSS feeds that require an absolute URL.
    *   Quartz will avoid using this as much as possible and use relative URLs most of the time
    */
@@ -75,6 +75,12 @@ export interface GlobalConfiguration {
    * Region Codes: https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
    */
   locale: ValidLocale
+  /**
+   * The default timezone when handling dates.
+   * Valid options are "system" (default), "utc", an IANA string, or a UTC offset
+   * https://moment.github.io/luxon/#/zones?id=specifying-a-zone
+   */
+  timezone?: "system" | string
 }
 
 export interface QuartzConfig {
