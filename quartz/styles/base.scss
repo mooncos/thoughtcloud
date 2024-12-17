@@ -202,6 +202,9 @@ a {
         padding: 0;
         padding-top: 2rem;
       }
+      @media all and not ($mobile) {
+        min-height: 100vh;
+      }
     }
 
     & .sidebar.right {
@@ -224,6 +227,9 @@ a {
         & > .toc {
           display: none;
         }
+      }
+      @media all and ($desktop) {
+        min-height: 100vh;
       }
     }
     & .page-header,
