@@ -44,6 +44,8 @@ const defaultOptions: SocialImageOptions = {
   excludeRoot: false,
 }
 
+const urlSchemeRegex = new RegExp("^(http|https)://", "i")
+
 export default (() => {
   let fontsPromise: Promise<SatoriOptions["fonts"]>
 
@@ -147,7 +149,9 @@ export default (() => {
 
     // Override with frontmatter url if existing
     if (frontmatterImgUrl) {
-      ogImagePath = `https://${cfg.baseUrl}/static/${frontmatterImgUrl}`
+      ogImagePath = urlSchemeRegex.test(frontmatterImgUrl)
+        ? frontmatterImgUrl
+        : `https://${cfg.baseUrl}/${frontmatterImgUrl}`
     }
 
     // Url of current page
