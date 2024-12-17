@@ -12,7 +12,9 @@ import {
 import path from "path"
 import { visit } from "unist-util-visit"
 import isAbsoluteUrl from "is-absolute-url"
-import { Root } from "hast"
+import { ElementContent, Root } from "hast"
+
+type Sub = [RegExp, string | ElementContent]
 
 interface Options {
   /** How to resolve Markdown paths */
@@ -22,6 +24,7 @@ interface Options {
   openLinksInNewTab: boolean
   lazyLoad: boolean
   externalLinkIcon: boolean
+  substitutions?: Sub[]
 }
 
 const defaultOptions: Options = {
@@ -55,32 +58,54 @@ export const CrawlLinks: QuartzTransformerPlugin<Partial<Options>> = (userOpts) 
                 node.properties &&
                 typeof node.properties.href === "string"
               ) {
-                let dest = node.properties.href as RelativeURL
+                let href = node.properties.href
+                var dest = href as RelativeURL
+                var refIcon: string | ElementContent | null = null
+                var matched = false
+                opts.substitutions?.every(([regex, sub]) => {
+                  let parts = href.match(regex)
+                  if (parts != null) {
+                    dest = parts.slice(1).join("") as RelativeURL
+                    if (typeof sub == "object") {
+                      refIcon = sub
+                    } else {
+                      refIcon = { type: "text", value: sub }
+                    }
+                    matched = true
+                    return false // break equivalent
+                  }
+                  return true
+                })
+                node.properties.href = dest
                 const classes = (node.properties.className ?? []) as string[]
                 const isExternal = isAbsoluteUrl(dest)
                 classes.push(isExternal ? "external" : "internal")
 
-                if (isExternal && opts.externalLinkIcon) {
-                  node.children.push({
-                    type: "element",
-                    tagName: "svg",
-                    properties: {
-                      "aria-hidden": "true",
-                      class: "external-icon",
-                      style: "max-width:0.8em;max-height:0.8em",
-                      viewBox: "0 0 512 512",
-                    },
-                    children: [
-                      {
-                        type: "element",
-                        tagName: "path",
-                        properties: {
-                          d: "M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z",
+                if ((isExternal && opts.externalLinkIcon) || matched) {
+                  node.children.push(
+                    refIcon != null
+                      ? refIcon
+                      : {
+                          type: "element",
+                          tagName: "svg",
+                          properties: {
+                            "aria-hidden": "true",
+                            class: "external-icon",
+                            style: "max-width:0.8em;max-height:0.8em",
+                            viewBox: "0 0 512 512",
+                          },
+                          children: [
+                            {
+                              type: "element",
+                              tagName: "path",
+                              properties: {
+                                d: "M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z",
+                              },
+                              children: [],
+                            },
+                          ],
                         },
-                        children: [],
-                      },
-                    ],
-                  })
+                  )
                 }
 
                 // Check if the link has alias text
