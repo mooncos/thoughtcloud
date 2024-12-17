@@ -202,19 +202,19 @@ export function renderPage(
   const Body = BodyConstructor()
 
   const LeftComponent = (
-    <div class="left sidebar">
+    <aside class="left sidebar">
       {left.map((BodyComponent) => (
         <BodyComponent {...componentData} />
       ))}
-    </div>
+    </aside>
   )
 
   const RightComponent = (
-    <div class="right sidebar">
+    <aside class="right sidebar">
       {right.map((BodyComponent) => (
         <BodyComponent {...componentData} />
       ))}
-    </div>
+    </aside>
   )
 
   const lang = componentData.fileData.frontmatter?.lang ?? cfg.locale?.split("-")[0] ?? "en"
@@ -223,29 +223,31 @@ export function renderPage(
       <Head {...componentData} />
       <body data-slug={slug}>
         <div id="quartz-root" class="page">
+          <Header {...componentData}>
+            {header.map((HeaderComponent) => (
+              <HeaderComponent {...componentData} />
+            ))}
+          </Header>
           <Body {...componentData}>
             {LeftComponent}
-            <div class="center">
+            <section class="center">
               <div class="page-header">
-                <Header {...componentData}>
-                  {header.map((HeaderComponent) => (
-                    <HeaderComponent {...componentData} />
-                  ))}
-                </Header>
                 <div class="popover-hint">
                   {beforeBody.map((BodyComponent) => (
                     <BodyComponent {...componentData} />
                   ))}
                 </div>
               </div>
-              <Content {...componentData} />
+              <main>
+                <Content {...componentData} />
+              </main>
               <hr />
               <div class="page-footer">
                 {afterBody.map((BodyComponent) => (
                   <BodyComponent {...componentData} />
                 ))}
               </div>
-            </div>
+            </section>
             {RightComponent}
             <Footer {...componentData} />
           </Body>

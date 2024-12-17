@@ -18,7 +18,7 @@ export default ((userOpts?: Partial<SearchOptions>) => {
     const opts = { ...defaultOptions, ...userOpts }
     const searchPlaceholder = i18n(cfg.locale).components.search.searchBarPlaceholder
     return (
-      <div class={classNames(displayClass, "search")}>
+      <search class={classNames(displayClass, "search")}>
         <button class="search-button" id="search-button">
           <p>{i18n(cfg.locale).components.search.title}</p>
           <svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7">
@@ -42,7 +42,7 @@ export default ((userOpts?: Partial<SearchOptions>) => {
             <div id="search-layout" data-preview={opts.enablePreview}></div>
           </div>
         </div>
-      </div>
+      </search>
     )
   }
 
