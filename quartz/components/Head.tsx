@@ -193,6 +193,16 @@ export default (() => {
             <meta property="twitter:url" content={socialUrl}></meta>
           </>
         )}
+        {cfg.baseUrl && (
+          <>
+            <link
+              rel="alternate"
+              type="application/rss+xml"
+              title={`${cfg.pageTitle} Feed`}
+              href={`https://${cfg.baseUrl}/index.xml`}
+            />
+          </>
+        )}
         <link rel="icon" href={iconPath} />
         <meta name="description" content={description} />
         <meta name="generator" content="Quartz" />
